@@ -1,0 +1,22 @@
+CANDIDATE_MECHANISMS = {
+    "M1": "S+cat<=>catS;k1,k-1|catS<=>P+cat;k2,k-2",
+    "M2": "S+cat<=>catS;k1,k-1|catS<=>P+cat;k2,k-2|2cat<=>cat2;k3,k-3",
+    "M3": "S+cat2<=>(cat)2S ;k1,k-1|(cat)2S<=>P+cat2;k2,k-2|2cat<=>cat2;k3,k-3",
+    "M4": "X+catS<=>S+cat;k1,k-1|X+catS<=>P+cat;k2,k-2",
+    "M5": "S+cat<=>catS;k1,k-1|catS+cat<=>catP+cat;k2,k-2|catP<=>P+cat;k3,k-3",
+    "M6": "cat=>cat*;k3,0|S+cat*<=>cat*S;k1,k-1|cat*S<=>P+cat*;k2,k-2",
+    "M7": "S+cat<=>catS;k1,k-1|S+catS<=>catS2;k3,k-3|catS2<=>P+catS;k2,k-2",
+    "M8": "S+cat*<=>cat*S;k1,k-1|cat*S<=>P+cat*;k2,k-2|cat<=>cat*+L;k3,k-3",
+    "M9": "S+cat<=>catS;k1,k-1|catS<=>P+cat;k2,k-2|cat=>inactive_cat;k3,0",
+    "M10": "S+cat<=>catS;k1,k-1|catS<=>P+cat;k2,k-2|inhibitor+cat=>inactive_catI;k3,0",
+    "M11": "S+cat<=>catS;k1,k-1|catS<=>P+cat;k2,k-2|S+cat=>inactive_catS;k3,0",
+    "M12": "S+cat<=>catS;k1,k-1|catS<=>P+cat;k2,k-2|P+cat=>inactive_catP;k3,0",
+    "M13": "S+cat<=>catS;k1,k-1|catS<=>P+cat;k2,k-2|2cat=>inactive_cat2;k3,0",
+    "M14": "S+cat<=>catS;k1,k-1|catS<=>P+cat;k2,k-2|catS=>inactive_catS;k3,0",
+    "M15": "S+cat<=>catS;k1,k-1|catS<=>P+cat;k2,k-2|inhibitor+catS=>inactive_catSI;k3,0",
+    "M16": "S+cat<=>catS;k1,k-1|catS<=>P+cat;k2,k-2|S+catS=>inactive_catS2;k3,0",
+    "M17": "S+cat<=>catS;k1,k-1|catS<=>P+cat;k2,k-2|P+catS=>inactive_catSP;k3,0",
+    "M18": "S+cat<=>catS;k1,k-1|catS<=>P+cat;k2,k-2|2catS=>inactive_cat2S2;k3,0",
+    "M19": "S+cat<=>catS;k1,k-1|catS<=>P+cat;k2,k-2|cat+catS=>inactive_cat2S;k3,0",
+    "M20": "S+cat<=>catS;k1,k-1|catS<=>P+cat;k2,k-2|cat=>inactive_cat;k3,0|catS=>inactive_catS;k4,0"
+}

@@ -1,0 +1,44 @@
+{
+    "model_name": "M9",
+    "k_vector": [
+        11.450072601317197,
+        0.12778875871294534,
+        2.447076545186696,
+        2.8480249631582972,
+        0.2781017756182374
+    ],
+    "species_list": [
+        "P",
+        "S",
+        "cat",
+        "catS",
+        "inactive_cat"
+    ],
+    "species_map": {
+        "P": 0,
+        "S": 1,
+        "cat": 2,
+        "catS": 3,
+        "inactive_cat": 4
+    },
+    "reaction_parameter_keys": [
+        "(R1).k1",
+        "(R2).k1",
+        "(R3).k1",
+        "(R4).k1",
+        "(R5).k1"
+    ],
+    "config": {
+        "s0_ref": 1.0,
+        "max_t": 1000
+    },
+    "validation_summary": {
+        "attempts_until_success": 4,
+        "num_validation_conditions": 100,
+        "required_passes": 5,
+        "passed_conditions": 5,
+        "passed_fraction": 0.05,
+        "best_passed_conditions_before_success": 1,
+        "used_condition_checker": true
+    }
+}

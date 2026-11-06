@@ -1,0 +1,19 @@
+{
+  "judge_model": "claude-4.7-opus",
+  "trace_dir": "bench/judge/runs/four_step_iter3/traces",
+  "rubrics": [
+    "hypothesis_space_alignment",
+    "mechanistic_feature_extraction",
+    "predictive_sharpness",
+    "feature_to_action_faithfulness"
+  ],
+  "dump_prompts_only": false,
+  "max_concurrency": 5,
+  "max_completion_tokens": 1024,
+  "resume": true,
+  "source_runs": [
+    "neurips_step_instruction_Mstar0_1_iter3_opus47_judge",
+    "neurips_step_instruction_additional_Mstar0_1_iter3_opus47_judge",
+    "neurips_step_instruction_remaining_valid_Mstar0_1_iter3_opus47_judge"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+    "model_name": "M10",
+    "k_vector": [
+        4.970006235838258,
+        0.2559516254193281,
+        0.5099519811990522,
+        0.025126896718724867,
+        0.12226203299069584
+    ],
+    "species_list": [
+        "P",
+        "S",
+        "cat",
+        "catS",
+        "inactive_catI",
+        "inhibitor"
+    ],
+    "species_map": {
+        "P": 0,
+        "S": 1,
+        "cat": 2,
+        "catS": 3,
+        "inactive_catI": 4,
+        "inhibitor": 5
+    },
+    "reaction_parameter_keys": [
+        "(R1).k1",
+        "(R2).k1",
+        "(R3).k1",
+        "(R4).k1",
+        "(R5).k1"
+    ],
+    "config": {
+        "s0_ref": 1.0,
+        "max_t": 1000
+    },
+    "validation_summary": {
+        "attempts_until_success": 2,
+        "num_validation_conditions": 100,
+        "required_passes": 5,
+        "passed_conditions": 5,
+        "passed_fraction": 0.05,
+        "best_passed_conditions_before_success": 0,
+        "used_condition_checker": true
+    }
+}

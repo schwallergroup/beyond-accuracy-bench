@@ -1,0 +1,116 @@
+{
+  "neurips_step_instruction_Mstar0_1_iter3_llm": {
+    "run_config.json": {
+      "source": "weave",
+      "trace_count": 120
+    }
+  },
+  "neurips_step_instruction_Mstar0_1_iter3_gpt54_judge": {
+    "run_config.json": {
+      "judge_model": "gpt-5.4",
+      "trace_dir": "bench/judge/runs/neurips_step_instruction_Mstar0_1_iter3_llm/traces",
+      "rubrics": [
+        "hypothesis_space_alignment",
+        "mechanistic_feature_extraction",
+        "predictive_sharpness",
+        "feature_to_action_faithfulness"
+      ],
+      "dump_prompts_only": false,
+      "max_concurrency": 5,
+      "max_completion_tokens": 1024,
+      "resume": true
+    }
+  },
+  "neurips_step_instruction_Mstar0_1_iter3_opus47_judge": {
+    "run_config.json": {
+      "judge_model": "claude-4.7-opus",
+      "trace_dir": "bench/judge/runs/neurips_step_instruction_Mstar0_1_iter3_llm/traces",
+      "rubrics": [
+        "hypothesis_space_alignment",
+        "mechanistic_feature_extraction",
+        "predictive_sharpness",
+        "feature_to_action_faithfulness"
+      ],
+      "dump_prompts_only": false,
+      "max_concurrency": 5,
+      "max_completion_tokens": 1024,
+      "resume": true
+    }
+  },
+  "neurips_step_instruction_additional_Mstar0_1_iter3_llm": {
+    "run_config.json": {
+      "source": "weave",
+      "trace_count": 120
+    }
+  },
+  "neurips_step_instruction_additional_Mstar0_1_iter3_gpt54_judge": {
+    "run_config.json": {
+      "judge_model": "gpt-5.4",
+      "trace_dir": "bench/judge/runs/neurips_step_instruction_additional_Mstar0_1_iter3_llm/traces",
+      "rubrics": [
+        "hypothesis_space_alignment",
+        "mechanistic_feature_extraction",
+        "predictive_sharpness",
+        "feature_to_action_faithfulness"
+      ],
+      "dump_prompts_only": false,
+      "max_concurrency": 5,
+      "max_completion_tokens": 1024,
+      "resume": true
+    }
+  },
+  "neurips_step_instruction_additional_Mstar0_1_iter3_opus47_judge": {
+    "run_config.json": {
+      "judge_model": "claude-4.7-opus",
+      "trace_dir": "bench/judge/runs/neurips_step_instruction_additional_Mstar0_1_iter3_llm/traces",
+      "rubrics": [
+        "hypothesis_space_alignment",
+        "mechanistic_feature_extraction",
+        "predictive_sharpness",
+        "feature_to_action_faithfulness"
+      ],
+      "dump_prompts_only": false,
+      "max_concurrency": 5,
+      "max_completion_tokens": 1024,
+      "resume": true
+    }
+  },
+  "neurips_step_instruction_remaining_valid_Mstar0_1_iter3_llm": {
+    "run_config.json": {
+      "source": "weave",
+      "trace_count": 120
+    }
+  },
+  "neurips_step_instruction_remaining_valid_Mstar0_1_iter3_gpt54_judge": {
+    "run_config.json": {
+      "judge_model": "gpt-5.4",
+      "trace_dir": "bench/judge/runs/neurips_step_instruction_remaining_valid_Mstar0_1_iter3_llm/traces",
+      "rubrics": [
+        "hypothesis_space_alignment",
+        "mechanistic_feature_extraction",
+        "predictive_sharpness",
+        "feature_to_action_faithfulness"
+      ],
+      "dump_prompts_only": false,
+      "max_concurrency": 1,
+      "max_completion_tokens": 1024,
+      "resume": true
+    }
+  },
+  "neurips_step_instruction_remaining_valid_Mstar0_1_iter3_opus47_judge": {
+    "run_config.json": {
+      "judge_model": "claude-4.7-opus",
+      "trace_dir": "bench/judge/runs/neurips_step_instruction_remaining_valid_Mstar0_1_iter3_llm/traces",
+      "rubrics": [
+        "hypothesis_space_alignment",
+        "mechanistic_feature_extraction",
+        "predictive_sharpness",
+        "feature_to_action_faithfulness"
+      ],
+      "dump_prompts_only": false,
+      "max_concurrency": 4,
+      "max_completion_tokens": 1024,
+      "resume": true
+    }
+  }
+}

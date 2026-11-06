@@ -1,0 +1,15 @@
+{
+  "neurips_10models_Mstar0_1_iter3": {
+    "run_config.json": {
+      "judge_model": "gpt-5.4",
+      "rubrics": [
+        "hypothesis_space_alignment",
+        "mechanistic_feature_extraction",
+        "predictive_sharpness",
+        "feature_to_action_faithfulness"
+      ],
+      "dump_prompts_only": false
+    }
+  },
+  "judge_by_opus47_combined": {}
+}

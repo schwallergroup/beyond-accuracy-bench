@@ -1,0 +1,19 @@
+model,rubric_key,mean_score,score_ci_low,score_ci_high,n_traces,accuracy,accuracy_ci_low,accuracy_ci_high,n_accuracy,color
+Claude Haiku 4.5,feature_to_action_faithfulness,1.612500,1.475000,1.750000,40,0.395000,0.330000,0.465000,200,#2F8F83
+Claude Haiku 4.5,predictive_sharpness,2.000000,2.000000,2.000000,40,0.395000,0.330000,0.465000,200,#2F8F83
+Claude Opus 4.7,feature_to_action_faithfulness,1.900000,1.800000,1.975000,40,0.465000,0.400000,0.535000,200,#FEBC2B
+Claude Opus 4.7,predictive_sharpness,1.975000,1.925000,2.000000,40,0.465000,0.400000,0.535000,200,#FEBC2B
+Gemini 2.5 Pro,feature_to_action_faithfulness,1.937500,1.875000,1.987500,40,0.545000,0.475000,0.615000,200,#B93389
+Gemini 2.5 Pro,predictive_sharpness,2.000000,2.000000,2.000000,40,0.545000,0.475000,0.615000,200,#B93389
+Gemini 3.1 Pro,feature_to_action_faithfulness,1.987500,1.962500,2.000000,40,0.570000,0.500000,0.635000,200,#8B0AA5
+Gemini 3.1 Pro,predictive_sharpness,2.000000,2.000000,2.000000,40,0.570000,0.500000,0.635000,200,#8B0AA5
+GPT-5.4,feature_to_action_faithfulness,1.950000,1.875000,2.000000,40,0.465000,0.395000,0.535000,200,#DB5B68
+GPT-5.4,predictive_sharpness,2.000000,2.000000,2.000000,40,0.465000,0.395000,0.535000,200,#DB5B68
+GPT-4o,feature_to_action_faithfulness,1.225000,1.112500,1.337500,40,0.380000,0.315000,0.450000,200,#F48849
+GPT-4o,predictive_sharpness,1.050000,0.987500,1.137500,40,0.380000,0.315000,0.450000,200,#F48849
+Qwen3-32B,feature_to_action_faithfulness,1.662500,1.525000,1.787500,40,0.410000,0.345000,0.480000,200,#A86D1B
+Qwen3-32B,predictive_sharpness,1.975000,1.937500,2.000000,40,0.410000,0.345000,0.480000,200,#A86D1B
+DeepSeek V3.2,feature_to_action_faithfulness,1.800000,1.637500,1.937500,40,0.512563,0.442211,0.582915,199,#1F5B9A
+DeepSeek V3.2,predictive_sharpness,1.900000,1.750000,2.000000,40,0.512563,0.442211,0.582915,199,#1F5B9A
+Llama 4 Maverick,feature_to_action_faithfulness,1.237500,1.112500,1.375000,40,0.375635,0.309645,0.446701,197,#8E6C8A
+Llama 4 Maverick,predictive_sharpness,1.250000,1.137500,1.375000,40,0.375635,0.309645,0.446701,197,#8E6C8A

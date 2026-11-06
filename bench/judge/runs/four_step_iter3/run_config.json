@@ -1,0 +1,11 @@
+{
+  "source": "weave",
+  "trace_count": 360,
+  "iteration": 3,
+  "n_models": 9,
+  "source_batches": [
+    "neurips_step_instruction_Mstar0_1_iter3",
+    "neurips_step_instruction_additional_Mstar0_1_iter3",
+    "neurips_step_instruction_remaining_valid_Mstar0_1_iter3"
+  ]
+}

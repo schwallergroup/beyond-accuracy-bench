@@ -1,0 +1,61 @@
+tag,model_label,sample_id,iteration
+20260417_031934.tar,Gemini 3.1 Pro with Mechanism Info,M2_1,3
+20260420_035848.tar,Gemini 2.5 Pro with Mechanism Info,M2_1,3
+20260420_090522.tar,GPT-5.4 with Mechanism Info,M2_1,3
+20260427_130523.tar,GPT-4o with Mechanism Info,M2_1,3
+20260417_131634.tar,Claude Haiku 4.5 with Mechanism Info,M2_1,3
+20260421_045049.tar,DeepSeek V3.2 with Mechanism Info,M2_1,3
+20260421_001004.tar,Mistral Large 3 with Mechanism Info,M2_1,3
+20260420_192950.tar,Llama 4 Maverick with Mechanism Info,M2_1,3
+20260420_140933.tar,Qwen3-32B with Mechanism Info,M2_1,3
+20260429_091641.tar,Claude Opus 4.7 with Mechanism Info,M2_1,3
+20260417_031934.tar,Gemini 3.1 Pro with Mechanism Info,M7_0,3
+20260420_035848.tar,Gemini 2.5 Pro with Mechanism Info,M7_0,3
+20260420_090522.tar,GPT-5.4 with Mechanism Info,M7_0,3
+20260427_130523.tar,GPT-4o with Mechanism Info,M7_0,3
+20260417_131634.tar,Claude Haiku 4.5 with Mechanism Info,M7_0,3
+20260421_045049.tar,DeepSeek V3.2 with Mechanism Info,M7_0,3
+20260421_001004.tar,Mistral Large 3 with Mechanism Info,M7_0,3
+20260420_192950.tar,Llama 4 Maverick with Mechanism Info,M7_0,3
+20260420_140933.tar,Qwen3-32B with Mechanism Info,M7_0,3
+20260428_091537.tar,Claude Opus 4.7 with Mechanism Info,M7_0,3
+20260417_031934.tar,Gemini 3.1 Pro with Mechanism Info,M12_0,3
+20260420_035848.tar,Gemini 2.5 Pro with Mechanism Info,M12_0,3
+20260420_090522.tar,GPT-5.4 with Mechanism Info,M12_0,3
+20260427_130523.tar,GPT-4o with Mechanism Info,M12_0,3
+20260417_131634.tar,Claude Haiku 4.5 with Mechanism Info,M12_0,3
+20260421_045049.tar,DeepSeek V3.2 with Mechanism Info,M12_0,3
+20260421_001004.tar,Mistral Large 3 with Mechanism Info,M12_0,3
+20260420_192950.tar,Llama 4 Maverick with Mechanism Info,M12_0,3
+20260420_140933.tar,Qwen3-32B with Mechanism Info,M12_0,3
+20260417_230553.tar,Claude Opus 4.7 with Mechanism Info,M12_0,3
+20260417_031934.tar,Gemini 3.1 Pro with Mechanism Info,M3_0,4
+20260420_035848.tar,Gemini 2.5 Pro with Mechanism Info,M3_0,4
+20260420_090522.tar,GPT-5.4 with Mechanism Info,M3_0,4
+20260427_130523.tar,GPT-4o with Mechanism Info,M3_0,4
+20260417_131634.tar,Claude Haiku 4.5 with Mechanism Info,M3_0,4
+20260421_045049.tar,DeepSeek V3.2 with Mechanism Info,M3_0,4
+20260421_001004.tar,Mistral Large 3 with Mechanism Info,M3_0,4
+20260420_192950.tar,Llama 4 Maverick with Mechanism Info,M3_0,4
+20260420_140933.tar,Qwen3-32B with Mechanism Info,M3_0,4
+20260429_091641.tar,Claude Opus 4.7 with Mechanism Info,M3_0,4
+20260417_031934.tar,Gemini 3.1 Pro with Mechanism Info,M9_0,4
+20260420_035848.tar,Gemini 2.5 Pro with Mechanism Info,M9_0,4
+20260420_090522.tar,GPT-5.4 with Mechanism Info,M9_0,4
+20260427_130523.tar,GPT-4o with Mechanism Info,M9_0,4
+20260417_131634.tar,Claude Haiku 4.5 with Mechanism Info,M9_0,4
+20260421_045049.tar,DeepSeek V3.2 with Mechanism Info,M9_0,4
+20260421_001004.tar,Mistral Large 3 with Mechanism Info,M9_0,4
+20260420_192950.tar,Llama 4 Maverick with Mechanism Info,M9_0,4
+20260420_140933.tar,Qwen3-32B with Mechanism Info,M9_0,4
+20260428_091537.tar,Claude Opus 4.7 with Mechanism Info,M9_0,4
+20260417_031934.tar,Gemini 3.1 Pro with Mechanism Info,M15_0,4
+20260420_035848.tar,Gemini 2.5 Pro with Mechanism Info,M15_0,4
+20260420_090522.tar,GPT-5.4 with Mechanism Info,M15_0,4
+20260427_130523.tar,GPT-4o with Mechanism Info,M15_0,4
+20260417_131634.tar,Claude Haiku 4.5 with Mechanism Info,M15_0,4
+20260421_045049.tar,DeepSeek V3.2 with Mechanism Info,M15_0,4
+20260421_001004.tar,Mistral Large 3 with Mechanism Info,M15_0,4
+20260420_192950.tar,Llama 4 Maverick with Mechanism Info,M15_0,4
+20260420_140933.tar,Qwen3-32B with Mechanism Info,M15_0,4
+20260417_230553.tar,Claude Opus 4.7 with Mechanism Info,M15_0,4

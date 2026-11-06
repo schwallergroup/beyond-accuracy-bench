@@ -1,0 +1,121 @@
+iteration,model_name,rubric_key,reasoning_score,n_shared_samples,task_accuracy,accuracy_ci_low,accuracy_ci_high,accuracy_n,rubric_label
+2,Claude Haiku 4.5,feature_to_action_faithfulness,1.500000,40,0.435000,0.370000,0.505000,200,Discriminative Experiment Design
+2,Claude Haiku 4.5,hypothesis_space_alignment,1.975000,40,0.435000,0.370000,0.505000,200,Belief Update
+2,Claude Haiku 4.5,mechanistic_feature_extraction,2.000000,40,0.435000,0.370000,0.505000,200,Hypothesis Discrimination
+2,Claude Haiku 4.5,predictive_sharpness,1.600000,40,0.435000,0.370000,0.505000,200,Predictive Reasoning
+2,Claude Opus 4.7,feature_to_action_faithfulness,1.875000,40,0.520000,0.450000,0.595000,200,Discriminative Experiment Design
+2,Claude Opus 4.7,hypothesis_space_alignment,1.675000,40,0.520000,0.450000,0.595000,200,Belief Update
+2,Claude Opus 4.7,mechanistic_feature_extraction,2.000000,40,0.520000,0.450000,0.595000,200,Hypothesis Discrimination
+2,Claude Opus 4.7,predictive_sharpness,1.225000,40,0.520000,0.450000,0.595000,200,Predictive Reasoning
+2,DeepSeek V3.2,feature_to_action_faithfulness,1.537500,40,0.470000,0.405000,0.540000,200,Discriminative Experiment Design
+2,DeepSeek V3.2,hypothesis_space_alignment,1.887500,40,0.470000,0.405000,0.540000,200,Belief Update
+2,DeepSeek V3.2,mechanistic_feature_extraction,1.925000,40,0.470000,0.405000,0.540000,200,Hypothesis Discrimination
+2,DeepSeek V3.2,predictive_sharpness,1.262500,40,0.470000,0.405000,0.540000,200,Predictive Reasoning
+2,GPT-4o,feature_to_action_faithfulness,1.162500,40,0.420000,0.350000,0.490000,200,Discriminative Experiment Design
+2,GPT-4o,hypothesis_space_alignment,1.987500,40,0.420000,0.350000,0.490000,200,Belief Update
+2,GPT-4o,mechanistic_feature_extraction,1.337500,40,0.420000,0.350000,0.490000,200,Hypothesis Discrimination
+2,GPT-4o,predictive_sharpness,0.862500,40,0.420000,0.350000,0.490000,200,Predictive Reasoning
+2,GPT-5.4,feature_to_action_faithfulness,1.600000,40,0.470000,0.400000,0.540000,200,Discriminative Experiment Design
+2,GPT-5.4,hypothesis_space_alignment,2.000000,40,0.470000,0.400000,0.540000,200,Belief Update
+2,GPT-5.4,mechanistic_feature_extraction,2.000000,40,0.470000,0.400000,0.540000,200,Hypothesis Discrimination
+2,GPT-5.4,predictive_sharpness,1.925000,40,0.470000,0.400000,0.540000,200,Predictive Reasoning
+2,Gemini 2.5 Pro,feature_to_action_faithfulness,1.950000,40,0.575000,0.510000,0.645000,200,Discriminative Experiment Design
+2,Gemini 2.5 Pro,hypothesis_space_alignment,2.000000,40,0.575000,0.510000,0.645000,200,Belief Update
+2,Gemini 2.5 Pro,mechanistic_feature_extraction,2.000000,40,0.575000,0.510000,0.645000,200,Hypothesis Discrimination
+2,Gemini 2.5 Pro,predictive_sharpness,1.825000,40,0.575000,0.510000,0.645000,200,Predictive Reasoning
+2,Gemini 3.1 Pro,feature_to_action_faithfulness,1.662500,40,0.610000,0.545000,0.680000,200,Discriminative Experiment Design
+2,Gemini 3.1 Pro,hypothesis_space_alignment,1.975000,40,0.610000,0.545000,0.680000,200,Belief Update
+2,Gemini 3.1 Pro,mechanistic_feature_extraction,2.000000,40,0.610000,0.545000,0.680000,200,Hypothesis Discrimination
+2,Gemini 3.1 Pro,predictive_sharpness,1.712500,40,0.610000,0.545000,0.680000,200,Predictive Reasoning
+2,Llama 4 Maverick,feature_to_action_faithfulness,1.150000,40,0.425000,0.355000,0.495000,200,Discriminative Experiment Design
+2,Llama 4 Maverick,hypothesis_space_alignment,1.925000,40,0.425000,0.355000,0.495000,200,Belief Update
+2,Llama 4 Maverick,mechanistic_feature_extraction,1.362500,40,0.425000,0.355000,0.495000,200,Hypothesis Discrimination
+2,Llama 4 Maverick,predictive_sharpness,0.887500,40,0.425000,0.355000,0.495000,200,Predictive Reasoning
+2,Mistral Large 3,feature_to_action_faithfulness,1.425000,40,0.430000,0.360000,0.495125,200,Discriminative Experiment Design
+2,Mistral Large 3,hypothesis_space_alignment,1.987500,40,0.430000,0.360000,0.495125,200,Belief Update
+2,Mistral Large 3,mechanistic_feature_extraction,2.000000,40,0.430000,0.360000,0.495125,200,Hypothesis Discrimination
+2,Mistral Large 3,predictive_sharpness,1.637500,40,0.430000,0.360000,0.495125,200,Predictive Reasoning
+2,Qwen3-32B,feature_to_action_faithfulness,1.337500,40,0.395000,0.325000,0.460000,200,Discriminative Experiment Design
+2,Qwen3-32B,hypothesis_space_alignment,1.900000,40,0.395000,0.325000,0.460000,200,Belief Update
+2,Qwen3-32B,mechanistic_feature_extraction,1.912500,40,0.395000,0.325000,0.460000,200,Hypothesis Discrimination
+2,Qwen3-32B,predictive_sharpness,1.075000,40,0.395000,0.325000,0.460000,200,Predictive Reasoning
+3,Claude Haiku 4.5,feature_to_action_faithfulness,1.600000,40,0.435000,0.370000,0.505000,200,Discriminative Experiment Design
+3,Claude Haiku 4.5,hypothesis_space_alignment,1.987500,40,0.435000,0.370000,0.505000,200,Belief Update
+3,Claude Haiku 4.5,mechanistic_feature_extraction,2.000000,40,0.435000,0.370000,0.505000,200,Hypothesis Discrimination
+3,Claude Haiku 4.5,predictive_sharpness,1.787500,40,0.435000,0.370000,0.505000,200,Predictive Reasoning
+3,Claude Opus 4.7,feature_to_action_faithfulness,1.925000,40,0.520000,0.450000,0.595000,200,Discriminative Experiment Design
+3,Claude Opus 4.7,hypothesis_space_alignment,1.825000,40,0.520000,0.450000,0.595000,200,Belief Update
+3,Claude Opus 4.7,mechanistic_feature_extraction,2.000000,40,0.520000,0.450000,0.595000,200,Hypothesis Discrimination
+3,Claude Opus 4.7,predictive_sharpness,1.500000,40,0.520000,0.450000,0.595000,200,Predictive Reasoning
+3,DeepSeek V3.2,feature_to_action_faithfulness,1.537500,40,0.470000,0.405000,0.540000,200,Discriminative Experiment Design
+3,DeepSeek V3.2,hypothesis_space_alignment,1.912500,40,0.470000,0.405000,0.540000,200,Belief Update
+3,DeepSeek V3.2,mechanistic_feature_extraction,1.962500,40,0.470000,0.405000,0.540000,200,Hypothesis Discrimination
+3,DeepSeek V3.2,predictive_sharpness,1.175000,40,0.470000,0.405000,0.540000,200,Predictive Reasoning
+3,GPT-4o,feature_to_action_faithfulness,1.162500,40,0.420000,0.350000,0.490000,200,Discriminative Experiment Design
+3,GPT-4o,hypothesis_space_alignment,1.975000,40,0.420000,0.350000,0.490000,200,Belief Update
+3,GPT-4o,mechanistic_feature_extraction,1.337500,40,0.420000,0.350000,0.490000,200,Hypothesis Discrimination
+3,GPT-4o,predictive_sharpness,0.700000,40,0.420000,0.350000,0.490000,200,Predictive Reasoning
+3,GPT-5.4,feature_to_action_faithfulness,1.750000,40,0.470000,0.400000,0.540000,200,Discriminative Experiment Design
+3,GPT-5.4,hypothesis_space_alignment,2.000000,40,0.470000,0.400000,0.540000,200,Belief Update
+3,GPT-5.4,mechanistic_feature_extraction,2.000000,40,0.470000,0.400000,0.540000,200,Hypothesis Discrimination
+3,GPT-5.4,predictive_sharpness,1.925000,40,0.470000,0.400000,0.540000,200,Predictive Reasoning
+3,Gemini 2.5 Pro,feature_to_action_faithfulness,1.937500,40,0.575000,0.510000,0.645000,200,Discriminative Experiment Design
+3,Gemini 2.5 Pro,hypothesis_space_alignment,2.000000,40,0.575000,0.510000,0.645000,200,Belief Update
+3,Gemini 2.5 Pro,mechanistic_feature_extraction,2.000000,40,0.575000,0.510000,0.645000,200,Hypothesis Discrimination
+3,Gemini 2.5 Pro,predictive_sharpness,1.950000,40,0.575000,0.510000,0.645000,200,Predictive Reasoning
+3,Gemini 3.1 Pro,feature_to_action_faithfulness,2.000000,40,0.610000,0.545000,0.680000,200,Discriminative Experiment Design
+3,Gemini 3.1 Pro,hypothesis_space_alignment,1.975000,40,0.610000,0.545000,0.680000,200,Belief Update
+3,Gemini 3.1 Pro,mechanistic_feature_extraction,2.000000,40,0.610000,0.545000,0.680000,200,Hypothesis Discrimination
+3,Gemini 3.1 Pro,predictive_sharpness,1.962500,40,0.610000,0.545000,0.680000,200,Predictive Reasoning
+3,Llama 4 Maverick,feature_to_action_faithfulness,1.175000,40,0.425000,0.355000,0.495000,200,Discriminative Experiment Design
+3,Llama 4 Maverick,hypothesis_space_alignment,2.000000,40,0.425000,0.355000,0.495000,200,Belief Update
+3,Llama 4 Maverick,mechanistic_feature_extraction,1.587500,40,0.425000,0.355000,0.495000,200,Hypothesis Discrimination
+3,Llama 4 Maverick,predictive_sharpness,0.887500,40,0.425000,0.355000,0.495000,200,Predictive Reasoning
+3,Mistral Large 3,feature_to_action_faithfulness,1.462500,40,0.430000,0.360000,0.495125,200,Discriminative Experiment Design
+3,Mistral Large 3,hypothesis_space_alignment,1.975000,40,0.430000,0.360000,0.495125,200,Belief Update
+3,Mistral Large 3,mechanistic_feature_extraction,2.000000,40,0.430000,0.360000,0.495125,200,Hypothesis Discrimination
+3,Mistral Large 3,predictive_sharpness,1.700000,40,0.430000,0.360000,0.495125,200,Predictive Reasoning
+3,Qwen3-32B,feature_to_action_faithfulness,1.450000,40,0.395000,0.325000,0.460000,200,Discriminative Experiment Design
+3,Qwen3-32B,hypothesis_space_alignment,1.912500,40,0.395000,0.325000,0.460000,200,Belief Update
+3,Qwen3-32B,mechanistic_feature_extraction,1.975000,40,0.395000,0.325000,0.460000,200,Hypothesis Discrimination
+3,Qwen3-32B,predictive_sharpness,1.100000,40,0.395000,0.325000,0.460000,200,Predictive Reasoning
+4,Claude Haiku 4.5,feature_to_action_faithfulness,1.600000,40,0.435000,0.370000,0.505000,200,Discriminative Experiment Design
+4,Claude Haiku 4.5,hypothesis_space_alignment,1.987500,40,0.435000,0.370000,0.505000,200,Belief Update
+4,Claude Haiku 4.5,mechanistic_feature_extraction,1.987500,40,0.435000,0.370000,0.505000,200,Hypothesis Discrimination
+4,Claude Haiku 4.5,predictive_sharpness,1.775000,40,0.435000,0.370000,0.505000,200,Predictive Reasoning
+4,Claude Opus 4.7,feature_to_action_faithfulness,1.825000,40,0.520000,0.450000,0.595000,200,Discriminative Experiment Design
+4,Claude Opus 4.7,hypothesis_space_alignment,1.900000,40,0.520000,0.450000,0.595000,200,Belief Update
+4,Claude Opus 4.7,mechanistic_feature_extraction,2.000000,40,0.520000,0.450000,0.595000,200,Hypothesis Discrimination
+4,Claude Opus 4.7,predictive_sharpness,1.700000,40,0.520000,0.450000,0.595000,200,Predictive Reasoning
+4,DeepSeek V3.2,feature_to_action_faithfulness,1.550000,40,0.470000,0.405000,0.540000,200,Discriminative Experiment Design
+4,DeepSeek V3.2,hypothesis_space_alignment,1.925000,40,0.470000,0.405000,0.540000,200,Belief Update
+4,DeepSeek V3.2,mechanistic_feature_extraction,1.987500,40,0.470000,0.405000,0.540000,200,Hypothesis Discrimination
+4,DeepSeek V3.2,predictive_sharpness,1.225000,40,0.470000,0.405000,0.540000,200,Predictive Reasoning
+4,GPT-4o,feature_to_action_faithfulness,1.200000,40,0.420000,0.350000,0.490000,200,Discriminative Experiment Design
+4,GPT-4o,hypothesis_space_alignment,1.987500,40,0.420000,0.350000,0.490000,200,Belief Update
+4,GPT-4o,mechanistic_feature_extraction,1.437500,40,0.420000,0.350000,0.490000,200,Hypothesis Discrimination
+4,GPT-4o,predictive_sharpness,0.787500,40,0.420000,0.350000,0.490000,200,Predictive Reasoning
+4,GPT-5.4,feature_to_action_faithfulness,1.775000,40,0.470000,0.400000,0.540000,200,Discriminative Experiment Design
+4,GPT-5.4,hypothesis_space_alignment,2.000000,40,0.470000,0.400000,0.540000,200,Belief Update
+4,GPT-5.4,mechanistic_feature_extraction,2.000000,40,0.470000,0.400000,0.540000,200,Hypothesis Discrimination
+4,GPT-5.4,predictive_sharpness,1.900000,40,0.470000,0.400000,0.540000,200,Predictive Reasoning
+4,Gemini 2.5 Pro,feature_to_action_faithfulness,1.700000,40,0.575000,0.510000,0.645000,200,Discriminative Experiment Design
+4,Gemini 2.5 Pro,hypothesis_space_alignment,1.975000,40,0.575000,0.510000,0.645000,200,Belief Update
+4,Gemini 2.5 Pro,mechanistic_feature_extraction,2.000000,40,0.575000,0.510000,0.645000,200,Hypothesis Discrimination
+4,Gemini 2.5 Pro,predictive_sharpness,1.800000,40,0.575000,0.510000,0.645000,200,Predictive Reasoning
+4,Gemini 3.1 Pro,feature_to_action_faithfulness,2.000000,40,0.610000,0.545000,0.680000,200,Discriminative Experiment Design
+4,Gemini 3.1 Pro,hypothesis_space_alignment,2.000000,40,0.610000,0.545000,0.680000,200,Belief Update
+4,Gemini 3.1 Pro,mechanistic_feature_extraction,2.000000,40,0.610000,0.545000,0.680000,200,Hypothesis Discrimination
+4,Gemini 3.1 Pro,predictive_sharpness,2.000000,40,0.610000,0.545000,0.680000,200,Predictive Reasoning
+4,Llama 4 Maverick,feature_to_action_faithfulness,1.137500,40,0.425000,0.355000,0.495000,200,Discriminative Experiment Design
+4,Llama 4 Maverick,hypothesis_space_alignment,1.937500,40,0.425000,0.355000,0.495000,200,Belief Update
+4,Llama 4 Maverick,mechanistic_feature_extraction,1.387500,40,0.425000,0.355000,0.495000,200,Hypothesis Discrimination
+4,Llama 4 Maverick,predictive_sharpness,0.812500,40,0.425000,0.355000,0.495000,200,Predictive Reasoning
+4,Mistral Large 3,feature_to_action_faithfulness,1.450000,40,0.430000,0.360000,0.495125,200,Discriminative Experiment Design
+4,Mistral Large 3,hypothesis_space_alignment,1.950000,40,0.430000,0.360000,0.495125,200,Belief Update
+4,Mistral Large 3,mechanistic_feature_extraction,1.975000,40,0.430000,0.360000,0.495125,200,Hypothesis Discrimination
+4,Mistral Large 3,predictive_sharpness,1.612500,40,0.430000,0.360000,0.495125,200,Predictive Reasoning
+4,Qwen3-32B,feature_to_action_faithfulness,1.500000,40,0.395000,0.325000,0.460000,200,Discriminative Experiment Design
+4,Qwen3-32B,hypothesis_space_alignment,1.900000,40,0.395000,0.325000,0.460000,200,Belief Update
+4,Qwen3-32B,mechanistic_feature_extraction,1.975000,40,0.395000,0.325000,0.460000,200,Hypothesis Discrimination
+4,Qwen3-32B,predictive_sharpness,1.112500,40,0.395000,0.325000,0.460000,200,Predictive Reasoning

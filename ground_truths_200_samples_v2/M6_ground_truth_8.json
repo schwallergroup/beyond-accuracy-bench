@@ -1,0 +1,44 @@
+{
+    "model_name": "M6",
+    "k_vector": [
+        0.10042960945169957,
+        0.2650075107077215,
+        0.2088503720105553,
+        12.432780974928347,
+        0.04221872598402898
+    ],
+    "species_list": [
+        "P",
+        "S",
+        "cat",
+        "cat*",
+        "cat*S"
+    ],
+    "species_map": {
+        "P": 0,
+        "S": 1,
+        "cat": 2,
+        "cat*": 3,
+        "cat*S": 4
+    },
+    "reaction_parameter_keys": [
+        "(R1).k1",
+        "(R2).k1",
+        "(R3).k1",
+        "(R4).k1",
+        "(R5).k1"
+    ],
+    "config": {
+        "s0_ref": 1.0,
+        "max_t": 1000
+    },
+    "validation_summary": {
+        "attempts_until_success": 2,
+        "num_validation_conditions": 100,
+        "required_passes": 5,
+        "passed_conditions": 5,
+        "passed_fraction": 0.05,
+        "best_passed_conditions_before_success": 0,
+        "used_condition_checker": true
+    }
+}

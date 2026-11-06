@@ -1,0 +1,41 @@
+model_name,rubric_key,rubric_label,reasoning_score,score_ci_low,score_ci_high,n_reasoning_samples,n_independent_systems,n_iterations,n_shared_sample_ids_per_iteration
+Claude Haiku 4.5,feature_to_action_faithfulness,Discriminative Experiment Design,1.566667,1.491667,1.645833,120,40,3,40
+Claude Haiku 4.5,hypothesis_space_alignment,Belief Update,1.983333,1.962500,2.000000,120,40,3,40
+Claude Haiku 4.5,mechanistic_feature_extraction,Hypothesis Discrimination,1.995833,1.987500,2.000000,120,40,3,40
+Claude Haiku 4.5,predictive_sharpness,Predictive Reasoning,1.720833,1.633333,1.804167,120,40,3,40
+Claude Opus 4.7,feature_to_action_faithfulness,Discriminative Experiment Design,1.875000,1.816458,1.925000,120,40,3,40
+Claude Opus 4.7,hypothesis_space_alignment,Belief Update,1.800000,1.725000,1.875000,120,40,3,40
+Claude Opus 4.7,mechanistic_feature_extraction,Hypothesis Discrimination,2.000000,2.000000,2.000000,120,40,3,40
+Claude Opus 4.7,predictive_sharpness,Predictive Reasoning,1.475000,1.383333,1.566667,120,40,3,40
+DeepSeek V3.2,feature_to_action_faithfulness,Discriminative Experiment Design,1.541667,1.462500,1.616667,120,40,3,40
+DeepSeek V3.2,hypothesis_space_alignment,Belief Update,1.908333,1.858333,1.950000,120,40,3,40
+DeepSeek V3.2,mechanistic_feature_extraction,Hypothesis Discrimination,1.958333,1.925000,1.983333,120,40,3,40
+DeepSeek V3.2,predictive_sharpness,Predictive Reasoning,1.220833,1.158333,1.287604,120,40,3,40
+GPT-4o,feature_to_action_faithfulness,Discriminative Experiment Design,1.175000,1.125000,1.225000,120,40,3,40
+GPT-4o,hypothesis_space_alignment,Belief Update,1.983333,1.962500,2.000000,120,40,3,40
+GPT-4o,mechanistic_feature_extraction,Hypothesis Discrimination,1.370833,1.291667,1.450000,120,40,3,40
+GPT-4o,predictive_sharpness,Predictive Reasoning,0.783333,0.733333,0.833333,120,40,3,40
+GPT-5.4,feature_to_action_faithfulness,Discriminative Experiment Design,1.708333,1.608333,1.800000,120,40,3,40
+GPT-5.4,hypothesis_space_alignment,Belief Update,2.000000,2.000000,2.000000,120,40,3,40
+GPT-5.4,mechanistic_feature_extraction,Hypothesis Discrimination,2.000000,2.000000,2.000000,120,40,3,40
+GPT-5.4,predictive_sharpness,Predictive Reasoning,1.916667,1.850000,1.975000,120,40,3,40
+Gemini 2.5 Pro,feature_to_action_faithfulness,Discriminative Experiment Design,1.862500,1.808333,1.912500,120,40,3,40
+Gemini 2.5 Pro,hypothesis_space_alignment,Belief Update,1.991667,1.979167,2.000000,120,40,3,40
+Gemini 2.5 Pro,mechanistic_feature_extraction,Hypothesis Discrimination,2.000000,2.000000,2.000000,120,40,3,40
+Gemini 2.5 Pro,predictive_sharpness,Predictive Reasoning,1.858333,1.804167,1.908333,120,40,3,40
+Gemini 3.1 Pro,feature_to_action_faithfulness,Discriminative Experiment Design,1.887500,1.858333,1.916667,120,40,3,40
+Gemini 3.1 Pro,hypothesis_space_alignment,Belief Update,1.983333,1.966667,1.995833,120,40,3,40
+Gemini 3.1 Pro,mechanistic_feature_extraction,Hypothesis Discrimination,2.000000,2.000000,2.000000,120,40,3,40
+Gemini 3.1 Pro,predictive_sharpness,Predictive Reasoning,1.891667,1.841667,1.933333,120,40,3,40
+Llama 4 Maverick,feature_to_action_faithfulness,Discriminative Experiment Design,1.154167,1.104167,1.208333,120,40,3,40
+Llama 4 Maverick,hypothesis_space_alignment,Belief Update,1.954167,1.925000,1.979167,120,40,3,40
+Llama 4 Maverick,mechanistic_feature_extraction,Hypothesis Discrimination,1.445833,1.362500,1.529167,120,40,3,40
+Llama 4 Maverick,predictive_sharpness,Predictive Reasoning,0.862500,0.808333,0.912500,120,40,3,40
+Mistral Large 3,feature_to_action_faithfulness,Discriminative Experiment Design,1.445833,1.379167,1.512500,120,40,3,40
+Mistral Large 3,hypothesis_space_alignment,Belief Update,1.970833,1.929167,2.000000,120,40,3,40
+Mistral Large 3,mechanistic_feature_extraction,Hypothesis Discrimination,1.991667,1.975000,2.000000,120,40,3,40
+Mistral Large 3,predictive_sharpness,Predictive Reasoning,1.650000,1.545833,1.754167,120,40,3,40
+Qwen3-32B,feature_to_action_faithfulness,Discriminative Experiment Design,1.429167,1.375000,1.483333,120,40,3,40
+Qwen3-32B,hypothesis_space_alignment,Belief Update,1.904167,1.858333,1.945833,120,40,3,40
+Qwen3-32B,mechanistic_feature_extraction,Hypothesis Discrimination,1.954167,1.925000,1.979167,120,40,3,40
+Qwen3-32B,predictive_sharpness,Predictive Reasoning,1.095833,1.041667,1.154167,120,40,3,40

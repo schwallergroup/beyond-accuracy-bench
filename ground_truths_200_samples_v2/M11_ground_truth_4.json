@@ -1,0 +1,44 @@
+{
+    "model_name": "M11",
+    "k_vector": [
+        13.920111749152097,
+        0.019679490777946174,
+        0.07274114985126416,
+        0.05570673948663203,
+        0.07113322733592556
+    ],
+    "species_list": [
+        "P",
+        "S",
+        "cat",
+        "catS",
+        "inactive_catS"
+    ],
+    "species_map": {
+        "P": 0,
+        "S": 1,
+        "cat": 2,
+        "catS": 3,
+        "inactive_catS": 4
+    },
+    "reaction_parameter_keys": [
+        "(R1).k1",
+        "(R2).k1",
+        "(R3).k1",
+        "(R4).k1",
+        "(R5).k1"
+    ],
+    "config": {
+        "s0_ref": 1.0,
+        "max_t": 1000
+    },
+    "validation_summary": {
+        "attempts_until_success": 8,
+        "num_validation_conditions": 100,
+        "required_passes": 5,
+        "passed_conditions": 5,
+        "passed_fraction": 0.05,
+        "best_passed_conditions_before_success": 0,
+        "used_condition_checker": true
+    }
+}

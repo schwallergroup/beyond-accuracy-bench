@@ -1,0 +1,11 @@
+{
+  "judge_model": "human:anonymous_annotator",
+  "rubrics": [
+    "hypothesis_space_alignment",
+    "mechanistic_feature_extraction",
+    "predictive_sharpness",
+    "feature_to_action_faithfulness"
+  ],
+  "resume": true,
+  "show_progress_metadata": true
+}

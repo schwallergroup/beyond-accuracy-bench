@@ -1,0 +1,5 @@
+model,metric,n_with_mechanism,n_without_mechanism,with_mechanism,with_ci_low,with_ci_high,without_mechanism,without_ci_low,without_ci_high,with_minus_without,difference_ci_low,difference_ci_high,with_source,without_source
+Gemini 3.1 Pro,Occupancy Entropy,200,197,0.492313,0.483968,0.500349,0.520795,0.513491,0.527612,-0.028482,-0.038974,-0.017786,20260417_031934.tar,20260728_123558.tar
+Gemini 3.1 Pro,S-cat Corner Mass,200,197,0.256000,0.235000,0.277000,0.284264,0.261929,0.307614,-0.028264,-0.058508,0.002011,20260417_031934.tar,20260728_123558.tar
+Gemini 2.5 Pro,Occupancy Entropy,200,200,0.470711,0.459499,0.481688,0.522294,0.514620,0.529968,-0.051583,-0.065257,-0.038506,20260420_035848.tar,20260728_172602.tar
+Gemini 2.5 Pro,S-cat Corner Mass,200,200,0.175000,0.153000,0.197000,0.105000,0.087000,0.124000,0.070000,0.041000,0.097025,20260420_035848.tar,20260728_172602.tar

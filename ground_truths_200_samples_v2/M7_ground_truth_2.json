@@ -1,0 +1,46 @@
+{
+    "model_name": "M7",
+    "k_vector": [
+        16.14461375996185,
+        0.28057680352145753,
+        0.12394966724139712,
+        2.120991185516242,
+        3.203434883083094,
+        0.012292839237399749
+    ],
+    "species_list": [
+        "P",
+        "S",
+        "cat",
+        "catS",
+        "catS2"
+    ],
+    "species_map": {
+        "P": 0,
+        "S": 1,
+        "cat": 2,
+        "catS": 3,
+        "catS2": 4
+    },
+    "reaction_parameter_keys": [
+        "(R1).k1",
+        "(R2).k1",
+        "(R3).k1",
+        "(R4).k1",
+        "(R5).k1",
+        "(R6).k1"
+    ],
+    "config": {
+        "s0_ref": 1.0,
+        "max_t": 1000
+    },
+    "validation_summary": {
+        "attempts_until_success": 4,
+        "num_validation_conditions": 100,
+        "required_passes": 5,
+        "passed_conditions": 5,
+        "passed_fraction": 0.05,
+        "best_passed_conditions_before_success": 4,
+        "used_condition_checker": true
+    }
+}

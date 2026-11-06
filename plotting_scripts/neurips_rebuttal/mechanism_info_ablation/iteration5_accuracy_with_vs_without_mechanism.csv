@@ -1,0 +1,5 @@
+model,n_with_mechanism,n_without_mechanism,n_shared_samples,accuracy_with_mechanism,with_mechanism_ci_low,with_mechanism_ci_high,accuracy_without_mechanism,without_mechanism_ci_low,without_mechanism_ci_high,with_minus_without,difference_ci_low,difference_ci_high,status,with_source,without_source
+Gemini 3.1 Pro,200,200,200,0.610000,0.544875,0.675000,0.605000,0.535000,0.670000,0.005000,-0.090000,0.100000,complete,20260417_031934.tar,20260728_123558.tar
+Gemini 2.5 Pro,200,200,200,0.575000,0.505000,0.640000,0.440000,0.375000,0.510000,0.135000,0.035000,0.230000,complete,20260420_035848.tar,20260728_172602.tar
+GPT-4o,200,61,61,0.420000,0.355000,0.485000,0.016393,0.000000,0.049180,0.403607,0.328607,0.480000,complete,20260427_130523.tar,20260728_223705.tar
+Claude Haiku 4.5,200,0,0,,,,,,,,,,No valid iteration-5 fitting result in mechanism-hidden archive,20260417_131634.tar,20260728_230109.tar

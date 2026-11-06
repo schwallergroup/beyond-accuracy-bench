@@ -1,0 +1,13 @@
+iteration,rubric_key,reasoning_score,n_models,spearman_rho_with_task_accuracy,bootstrap_ci_low,bootstrap_ci_high,two_sided_p_value
+2,feature_to_action_faithfulness,Discriminative Experiment Design,10,0.911858,0.600542,1.000000,0.000237
+3,feature_to_action_faithfulness,Discriminative Experiment Design,10,0.942254,0.686275,1.000000,0.000045
+4,feature_to_action_faithfulness,Discriminative Experiment Design,10,0.851068,0.488448,0.987261,0.001791
+2,hypothesis_space_alignment,Belief Update,10,0.101229,-0.629862,0.755164,0.780817
+3,hypothesis_space_alignment,Belief Update,10,0.071897,-0.605988,0.722120,0.843535
+4,hypothesis_space_alignment,Belief Update,10,0.315957,-0.480004,0.889051,0.373807
+2,mechanistic_feature_extraction,Hypothesis Discrimination,10,0.729384,0.247329,0.904004,0.016670
+3,mechanistic_feature_extraction,Hypothesis Discrimination,10,0.654048,0.126029,0.899529,0.040216
+4,mechanistic_feature_extraction,Hypothesis Discrimination,10,0.883813,0.586754,0.971286,0.000691
+2,predictive_sharpness,Predictive Reasoning,10,0.693012,0.092377,0.886792,0.026293
+3,predictive_sharpness,Predictive Reasoning,10,0.808514,0.334400,1.000000,0.004635
+4,predictive_sharpness,Predictive Reasoning,10,0.826752,0.439554,0.990699,0.003180

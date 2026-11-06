@@ -1,0 +1,7 @@
+axis,llm_judge_scores,n,expert_1_mean,expert_2_mean
+PR,Both judges: 0,3,0.333333,0.000000
+PR,Both judges: 2,17,1.823529,1.941176
+DED,Both judges: 0,0,,
+DED,"GPT: 0, Claude: 1",1,1.000000,0.000000
+DED,"GPT: 1, Claude: 0",1,1.000000,1.000000
+DED,Both judges: 2,21,1.952381,1.952381

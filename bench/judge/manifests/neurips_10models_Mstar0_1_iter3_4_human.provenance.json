@@ -1,0 +1,24 @@
+{
+  "derived_at_utc": "2026-07-26T05:12:00.030978+00:00",
+  "source_manifest": "bench/judge/runs/standard_iter3/manifest.csv",
+  "source_manifest_sha256": "3b60e72304adc7e6b56932ffe0b748599185f21568694cfcd0ac06f5830ac780",
+  "source_row_count": 400,
+  "sample_indices": null,
+  "iterations": null,
+  "sample_ids_by_iteration": [
+    "3:M2_1,M7_0,M12_0",
+    "4:M3_0,M9_0,M15_0"
+  ],
+  "derived_row_count": 60,
+  "command": [
+    "/usr/local/Caskroom/miniconda/base/bin/python3",
+    "/Users/ryo/Desktop/code/KineticMechanismBench/bench/judge/derive_manifest.py",
+    "--source-manifest",
+    "bench/judge/runs/standard_iter3/manifest.csv",
+    "--sample-ids-by-iteration",
+    "3:M2_1,M7_0,M12_0",
+    "4:M3_0,M9_0,M15_0",
+    "--output",
+    "bench/judge/manifests/neurips_10models_Mstar0_1_iter3_4_human.csv"
+  ]
+}

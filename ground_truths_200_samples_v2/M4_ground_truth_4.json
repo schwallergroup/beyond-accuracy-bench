@@ -1,0 +1,42 @@
+{
+    "model_name": "M4",
+    "k_vector": [
+        0.4442017449575037,
+        0.3457025772161957,
+        2.312986349600516,
+        0.11965549829031928
+    ],
+    "species_list": [
+        "P",
+        "S",
+        "X",
+        "cat",
+        "catS"
+    ],
+    "species_map": {
+        "P": 0,
+        "S": 1,
+        "X": 2,
+        "cat": 3,
+        "catS": 4
+    },
+    "reaction_parameter_keys": [
+        "(R1).k1",
+        "(R2).k1",
+        "(R3).k1",
+        "(R4).k1"
+    ],
+    "config": {
+        "s0_ref": 1.0,
+        "max_t": 1000
+    },
+    "validation_summary": {
+        "attempts_until_success": 3,
+        "num_validation_conditions": 100,
+        "required_passes": 5,
+        "passed_conditions": 5,
+        "passed_fraction": 0.05,
+        "best_passed_conditions_before_success": 2,
+        "used_condition_checker": true
+    }
+}

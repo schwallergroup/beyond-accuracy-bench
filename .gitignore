@@ -1,0 +1,70 @@
+**/__pycache__/
+**/.pytest_cache/
+*.pyc
+outcmaes/
+.agents/
+.claude
+
+plotting_scripts/neurips/imgs_for_paper/*
+!plotting_scripts/neurips/imgs_for_paper/
+!plotting_scripts/neurips/imgs_for_paper/baseline_accuracy_entropy_comparison.png
+!plotting_scripts/neurips/imgs_for_paper/model_accuracy_at_iteration5.png
+
+/results/*
+
+# Only archives selected by the paper plotting scripts are released.
+
+# Main ten-model runs (paper_model_metadata.LABELS + PREFERRED_SOURCES_BY_LABEL)
+!results/20260417_031934.tar
+!results/20260420_035848.tar
+!results/20260420_090522.tar
+!results/20260427_130523.tar
+!results/20260429_merged_opus_complete.tar
+!results/20260417_131634.tar
+!results/20260421_045049.tar
+!results/20260421_001004.tar
+!results/20260420_192950.tar
+!results/20260420_140933.tar
+
+# Baseline/reference runs (baseline_accuracy_entropy_comparison.py)
+!results/20260421_105526.tar
+!results/20260416_152044.tar
+!results/20260429_111756.tar
+
+# Mechanism-information ablation (MODEL_SOURCES)
+!results/20260728_123558.tar
+!results/20260728_172602.tar
+!results/20260728_223705.tar
+!results/20260728_230109.tar
+
+# Nine-model four-step ablation (STEP_RUNS)
+!results/20260919_112018.tar
+!results/20260919_160526.tar
+!results/20260730_071419.tar
+!results/20260729_111220.tar
+!results/20260730_121845.tar
+!results/20260729_160817.tar
+!results/20260730_171350.tar
+!results/20260729_205512.tar
+!results/20260919_204951.tar
+
+comparison_results/
+ground_truths_200_samples/
+ground_truths_val/
+
+basico_kinetic_data_generator.py
+.env
+logs/
+.venv/
+
+.codex
+
+# Local configuration, maintenance notes, and generated judge prompt dumps.
+*.slurm
+.vscode/
+/local_notes/
+bench/judge/runs/**/prompts/
+.DS_Store
+
+release/
+kinetic_overview/

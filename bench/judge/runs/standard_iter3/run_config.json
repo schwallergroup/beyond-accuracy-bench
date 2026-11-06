@@ -1,0 +1,8 @@
+{
+  "description": "Historical standard-prompt iteration-3 evaluation; scores unchanged.",
+  "trace_count": 400,
+  "source_runs": [
+    "neurips_10models_Mstar0_1_iter3",
+    "judge_by_opus47_combined"
+  ]
+}

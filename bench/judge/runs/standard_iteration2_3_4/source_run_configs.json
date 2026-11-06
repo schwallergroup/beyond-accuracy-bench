@@ -1,0 +1,34 @@
+{
+  "neurips_10models_Mstar0_1_iter2_3_4_llm": {
+    "source": "weave",
+    "trace_count": 1200
+  },
+  "neurips_10models_Mstar0_1_iter2_3_4_gpt54_judge": {
+    "judge_model": "gpt-5.4",
+    "trace_dir": "bench/judge/runs/neurips_10models_Mstar0_1_iter2_3_4_llm/traces",
+    "rubrics": [
+      "hypothesis_space_alignment",
+      "mechanistic_feature_extraction",
+      "predictive_sharpness",
+      "feature_to_action_faithfulness"
+    ],
+    "dump_prompts_only": false,
+    "max_concurrency": 5,
+    "max_completion_tokens": 1024,
+    "resume": true
+  },
+  "neurips_10models_Mstar0_1_iter2_3_4_claude47_judge": {
+    "judge_model": "claude-4.7-opus",
+    "trace_dir": "bench/judge/runs/neurips_10models_Mstar0_1_iter2_3_4_llm/traces",
+    "rubrics": [
+      "hypothesis_space_alignment",
+      "mechanistic_feature_extraction",
+      "predictive_sharpness",
+      "feature_to_action_faithfulness"
+    ],
+    "dump_prompts_only": false,
+    "max_concurrency": 5,
+    "max_completion_tokens": 1024,
+    "resume": true
+  }
+}

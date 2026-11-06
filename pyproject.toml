@@ -1,0 +1,31 @@
+[project]
+name = "kineticmechanismbench"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Ryo Kuroki"}
+]
+readme = "README.md"
+license = "CC-BY-4.0"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "weave (==0.52.8)",
+    "openai (==1.105.0)",
+    "numpy (<2.4)",
+    "numba (==0.63.1)",
+    "langchain-openai (==0.3.32)",
+    "seaborn (>=0.13.2,<0.14.0)",
+    "matplotlib (>=3.10.8,<4.0.0)",
+    "cma (>=4.4.1,<5.0.0)",
+    "scipy (>=1.17.0,<2.0.0)",
+    "pandas (>=3.0.0,<4.0.0)",
+    "scikit-learn (>=1.8.0,<2.0.0)",
+    "python-dotenv (>=1.2.1,<2.0.0)",
+    "copasi-basico (>=0.86,<0.87)",
+    "streamlit (>=1.30,<2.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

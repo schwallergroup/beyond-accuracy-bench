@@ -1,0 +1,5 @@
+axis,llm_judge_consensus,n,expert_1_mean,expert_2_mean,expert_consensus_mean,expert_1_exact_agreement,expert_2_exact_agreement
+PR,Both judges: 0,3,0.333333,0.000000,0.166667,0.666667,1.000000
+PR,Both judges: 2,17,1.823529,1.941176,1.882353,0.882353,0.941176
+DED,Both judges: 1,13,1.307692,1.384615,1.346154,0.538462,0.461538
+DED,Both judges: 2,21,1.952381,1.952381,1.952381,0.952381,0.952381

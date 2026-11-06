@@ -1,0 +1,13 @@
+comparison,agreement_level,rubric_key,reasoning_score,n_pairs,spearman_rho,bootstrap_ci_low,bootstrap_ci_high,two_sided_p_value
+independent_annotators,trace,feature_to_action_faithfulness,Discriminative Experiment Design,60,0.726786,0.509597,0.901496,0.000000
+independent_annotators,model,feature_to_action_faithfulness,Discriminative Experiment Design,10,0.596449,-0.263523,0.912871,0.068745
+independent_annotators,trace,predictive_sharpness,Predictive Reasoning,60,0.651101,0.445090,0.809691,0.000000
+independent_annotators,model,predictive_sharpness,Predictive Reasoning,10,0.940442,0.757317,1.000000,0.000051
+annotator_1_vs_llm,trace,feature_to_action_faithfulness,Discriminative Experiment Design,60,0.407095,0.142320,0.631400,0.001246
+annotator_1_vs_llm,model,feature_to_action_faithfulness,Discriminative Experiment Design,10,0.578829,-0.121209,0.874581,0.079562
+annotator_1_vs_llm,trace,predictive_sharpness,Predictive Reasoning,60,0.590200,0.359613,0.762790,0.000001
+annotator_1_vs_llm,model,predictive_sharpness,Predictive Reasoning,10,0.861546,0.458765,0.990639,0.001356
+annotator_2_vs_llm,trace,feature_to_action_faithfulness,Discriminative Experiment Design,60,0.534627,0.304221,0.709623,0.000011
+annotator_2_vs_llm,model,feature_to_action_faithfulness,Discriminative Experiment Design,10,0.820268,0.537086,0.974141,0.003653
+annotator_2_vs_llm,trace,predictive_sharpness,Predictive Reasoning,60,0.722668,0.551902,0.850098,0.000000
+annotator_2_vs_llm,model,predictive_sharpness,Predictive Reasoning,10,0.920245,0.633642,0.996870,0.000161

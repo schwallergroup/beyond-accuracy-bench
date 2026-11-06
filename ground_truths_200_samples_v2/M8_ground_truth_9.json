@@ -1,0 +1,48 @@
+{
+    "model_name": "M8",
+    "k_vector": [
+        84.61336997573063,
+        0.06601662695015645,
+        47.97315785247519,
+        1.8465877270707265,
+        1.9431791905659803,
+        27.345279505480757
+    ],
+    "species_list": [
+        "L",
+        "P",
+        "S",
+        "cat",
+        "cat*",
+        "cat*S"
+    ],
+    "species_map": {
+        "L": 0,
+        "P": 1,
+        "S": 2,
+        "cat": 3,
+        "cat*": 4,
+        "cat*S": 5
+    },
+    "reaction_parameter_keys": [
+        "(R1).k1",
+        "(R2).k1",
+        "(R3).k1",
+        "(R4).k1",
+        "(R5).k1",
+        "(R6).k1"
+    ],
+    "config": {
+        "s0_ref": 1.0,
+        "max_t": 1000
+    },
+    "validation_summary": {
+        "attempts_until_success": 4,
+        "num_validation_conditions": 100,
+        "required_passes": 5,
+        "passed_conditions": 5,
+        "passed_fraction": 0.05,
+        "best_passed_conditions_before_success": 0,
+        "used_condition_checker": true
+    }
+}

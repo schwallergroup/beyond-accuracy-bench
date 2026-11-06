@@ -1,0 +1,46 @@
+{
+    "model_name": "M3",
+    "k_vector": [
+        27.888875031715273,
+        8.575756686950868,
+        9.97905074369909,
+        0.8898905873908153,
+        64.07211427120218,
+        0.016006998409144924
+    ],
+    "species_list": [
+        "(cat)2S",
+        "P",
+        "S",
+        "cat",
+        "cat2"
+    ],
+    "species_map": {
+        "(cat)2S": 0,
+        "P": 1,
+        "S": 2,
+        "cat": 3,
+        "cat2": 4
+    },
+    "reaction_parameter_keys": [
+        "(R1).k1",
+        "(R2).k1",
+        "(R3).k1",
+        "(R4).k1",
+        "(R5).k1",
+        "(R6).k1"
+    ],
+    "config": {
+        "s0_ref": 1.0,
+        "max_t": 1000
+    },
+    "validation_summary": {
+        "attempts_until_success": 2,
+        "num_validation_conditions": 100,
+        "required_passes": 5,
+        "passed_conditions": 5,
+        "passed_fraction": 0.05,
+        "best_passed_conditions_before_success": 2,
+        "used_condition_checker": true
+    }
+}
