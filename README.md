@@ -16,6 +16,8 @@ The LLM judge scores and expert ratings used in the paper are included in this r
 
 ## Citation and license
 
-Please cite **Beyond Accuracy: A Diagnostic Benchmark for Hypothesis-Driven Experiment Planning in LLM Agents** when using this benchmark. The paper is linked above; full bibliographic details will be added when finalized.
+Please cite Ryo Kuroki, Amin Mansouri, and Philippe Schwaller, **Beyond Accuracy: A Diagnostic Benchmark for Hypothesis-Driven Experiment Planning in LLM Agents**, NeurIPS 2026. Machine-readable citation details are in [CITATION.cff](CITATION.cff).
+
+The [public dataset](https://huggingface.co/datasets/xq8wvm/HypothesisDrivenExperimentPlanningBench) contains the 200 synthetic systems and validated Croissant metadata. See [provenance and attribution](docs/provenance.md) for the mechanism source, generated data, and software dependencies.
 
 Released under [CC-BY-4.0](LICENSE).

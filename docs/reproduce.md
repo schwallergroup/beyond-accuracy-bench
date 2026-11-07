@@ -26,6 +26,7 @@ Complete [environment setup](setup.md), then run commands from the repository ro
 | Fig. 2: accuracy, mechanism entropy, occupancy entropy, corner mass | `poetry run python plotting_scripts/neurips/baseline_accuracy_entropy_comparison.py` | `plotting_scripts/neurips/imgs_for_paper/baseline_accuracy_entropy_comparison.png` |
 | Fig. 3: accuracy at iteration 5 | `poetry run python plotting_scripts/neurips/model_accuracy_at_iteration5.py` | `plotting_scripts/neurips/imgs_for_paper/model_accuracy_at_iteration5.png` |
 | Fig. 4: reasoning scores and DED/PR–accuracy relationships | `poetry run python plotting_scripts/neurips_rebuttal/camera_ready_reasoning_score_figures.py` | `plotting_scripts/neurips_rebuttal/imgs_for_paper/camera_ready_reasoning_scores_iterations_2_to_4.png` and `camera_ready_ded_pr_vs_accuracy_iterations_2_to_4.png`; source tables in `iteration_analysis/` |
+| Fig. 5: paired PR, DED, and accuracy changes | First run `poetry run python plotting_scripts/neurips_rebuttal/paired_prompt_effects.py`, then `poetry run python plotting_scripts/neurips_rebuttal/prompting_ablation_paired_changes.py` | `plotting_scripts/neurips_rebuttal/step_instruction_judge_analysis/prompting_ablation_paired_changes.png` and its source CSV; layout is regenerated from the released paired data |
 
 Archived experiments are in `results/*.tar`. The preferred main-run mapping is defined in `plotting_scripts/neurips/archived_experiment_data.py` (`PREFERRED_SOURCES_BY_LABEL`); paper model labels are in `paper_model_metadata.py` in the same directory. Keep archive filenames unchanged.
 
@@ -49,11 +50,11 @@ The older `plotting_scripts/neurips/judge_rubric_scores_by_model.py` and `judge_
 
 | Paper result | Command or saved result |
 | --- | --- |
-| H.4, Table 5: iteration-specific reasoning–accuracy correlations | `poetry run python plotting_scripts/neurips_rebuttal/iteration_reasoning_score_report.py`; read `iteration_analysis/iteration_score_accuracy_spearman.csv` |
-| I.1, Fig. 5: standard vs four-step instructions | `poetry run python plotting_scripts/neurips_rebuttal/step_instruction_standard_vs_step_scatter.py`; output `step_instruction_judge_analysis/standard_vs_step_instruction_accuracy_ded_pr_scatter.png` |
-| I.1, Fig. 6: four-step reasoning vs accuracy | `poetry run python plotting_scripts/neurips_rebuttal/step_instruction_judge_score_accuracy_scatter.py`; output `step_instruction_judge_analysis/iteration3_pr_ded_vs_iteration5_accuracy_scatter.png` |
+| H.5, Table 7: iteration-specific reasoning–accuracy correlations | `poetry run python plotting_scripts/neurips_rebuttal/iteration_reasoning_score_report.py`; read `iteration_analysis/iteration_score_accuracy_spearman.csv` |
+| I.1, Fig. 6: standard vs four-step instructions | `poetry run python plotting_scripts/neurips_rebuttal/step_instruction_standard_vs_step_scatter.py`; output `step_instruction_judge_analysis/standard_vs_step_instruction_accuracy_ded_pr_scatter.png` |
+| I.1, Fig. 7: four-step reasoning vs accuracy | `poetry run python plotting_scripts/neurips_rebuttal/step_instruction_judge_score_accuracy_scatter.py`; output `step_instruction_judge_analysis/iteration3_pr_ded_vs_iteration5_accuracy_scatter.png` |
 | I.1: four-step correlation estimates and confidence intervals | `poetry run python plotting_scripts/neurips_rebuttal/step_instruction_reasoning_accuracy_correlation.py`; output `step_instruction_judge_analysis/iteration3_pr_ded_vs_iteration5_accuracy_spearman.csv` |
-| H.3, Table 4: expert–expert and both expert–LLM agreements | `poetry run python plotting_scripts/neurips_rebuttal/independent_expert_agreement_report.py`; output `judge_agreement_analysis/independent_annotator_and_llm_agreement_spearman.csv` |
+| H.4, Table 4: expert–expert and both expert–LLM agreements | `poetry run python plotting_scripts/neurips_rebuttal/independent_expert_agreement_report.py`; output `judge_agreement_analysis/independent_annotator_and_llm_agreement_spearman.csv` |
 | Appendix table: extreme-score expert audit | The same expert-agreement command; outputs `judge_agreement_analysis/blinded_expert_audit_llm_high_low.csv` and `blinded_expert_audit_llm_consensus_extremes.csv` |
 | Appendix table: mechanism information withheld, accuracy | `poetry run python plotting_scripts/neurips_rebuttal/mechanism_info_accuracy_comparison.py`; output `mechanism_info_ablation/iteration5_accuracy_with_vs_without_mechanism.csv` |
 | Appendix table: mechanism information withheld, exploration | `poetry run python plotting_scripts/neurips_rebuttal/mechanism_info_entropy_comparison.py`; output `mechanism_info_ablation/iteration5_entropy_with_vs_without_mechanism.csv` |
@@ -97,7 +98,7 @@ figure and its source data, without computing cross-prompt rank correlations.
 Expert agreement has one entry point covering both experts and the audit;
 no separate expert-1-only CSV is written.
 
-For H.3 Tables 2–3, the author pilot contains 30 traces × four axes. A dedicated script reproducing both final tables is not currently included. For Appendix K's two representative traces, the source traces and judge results are included, but an exact selection manifest for the two published examples is not currently supplied.
+For H.4 Tables 2–3, the author pilot contains 30 traces × four axes. A dedicated script reproducing both final tables is not currently included. For Appendix K's two representative traces, the source traces and judge results are included, but an exact selection manifest for the two published examples is not currently supplied.
 
 ## Judge data directory map
 
@@ -109,7 +110,7 @@ All paths in this table are under `bench/judge/`.
 | `runs/standard_iteration2_3_4/results/gpt54/` | Main GPT-5.4 scores |
 | `runs/standard_iteration2_3_4/results/claude47/` | Main Claude Opus 4.7 scores |
 | `runs/standard_iter3/` | Historical standard-prompt 400 traces and both judges; `results/gpt54/` and `results/claude47/`, used by Fig. 5 |
-| `runs/four_step_iter3/` | All nine four-step models: 360 traces and both judges; `results/gpt54/` and `results/claude47/`, used by Fig. 5/6 |
+| `runs/four_step_iter3/` | All nine four-step models: 360 traces and both judges; `results/gpt54/` and `results/claude47/`, used by Figs. 5–7 |
 | `runs/neurips_10models_Mstar0_1_iter3_4_human/` | The 60 traces assigned to independent experts |
 | `human_runs/neurips_10models_pilot_M12_0_M7_0_M2_1_iter3/` | Author pilot: 30 traces, four axes |
 | `human_runs/human_judge_results_f6e6ad1c5a1f.csv` | First expert: 60 traces, DED and PR |

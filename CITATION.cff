@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, please cite the accompanying paper."
+type: software
+title: "Beyond Accuracy: A Diagnostic Benchmark for Hypothesis-Driven Experiment Planning in LLM Agents"
+authors:
+  - family-names: Kuroki
+    given-names: Ryo
+  - family-names: Mansouri
+    given-names: Amin
+  - family-names: Schwaller
+    given-names: Philippe
+url: "https://github.com/schwallergroup/beyond-accuracy-bench"
+license: CC-BY-4.0
+preferred-citation:
+  type: conference-paper
+  title: "Beyond Accuracy: A Diagnostic Benchmark for Hypothesis-Driven Experiment Planning in LLM Agents"
+  authors:
+    - family-names: Kuroki
+      given-names: Ryo
+    - family-names: Mansouri
+      given-names: Amin
+    - family-names: Schwaller
+      given-names: Philippe
+  year: 2026
+  conference:
+    name: "Neural Information Processing Systems (NeurIPS)"
+  url: "https://openreview.net/forum?id=VZAGnyBRvm"
