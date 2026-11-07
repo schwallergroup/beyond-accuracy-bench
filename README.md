@@ -4,7 +4,7 @@ This benchmark evaluates how LLM agents plan experiments to identify hidden kine
 
 This repository contains the benchmark implementation, 20 COPASI mechanisms, 200 sampled systems, and LLM/expert judgments used in the paper. [Paper (OpenReview)](https://openreview.net/forum?id=VZAGnyBRvm) · [PDF](https://openreview.net/pdf?id=VZAGnyBRvm)
 
-![Benchmark overview: agents propose experiments, receive kinetic-mechanism fitting feedback, and are evaluated on behavior and reasoning.](plotting_scripts/overview-five-points.png)
+![Benchmark overview: agents propose experiments, receive kinetic-mechanism fitting feedback, and are evaluated on behavior and reasoning.](plotting_scripts/figure1-final.png)
 
 ## Use the benchmark
 
