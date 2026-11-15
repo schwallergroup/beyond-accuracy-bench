@@ -1,0 +1,11 @@
+{
+  "source": "weave",
+  "iterations": [
+    2,
+    3,
+    4
+  ],
+  "trace_count": 1078,
+  "original_iteration3": "incorporated in combined manifest, traces and results",
+  "missing_report": "unavailable_traces.json"
+}

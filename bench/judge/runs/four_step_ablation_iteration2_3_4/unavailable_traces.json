@@ -1,0 +1,16 @@
+[
+  {
+    "tag": "20260729_205512.tar",
+    "model_label": "DeepSeek V3.2 step instruction",
+    "sample_id": "M7_1",
+    "iteration": "4",
+    "error": "No Weave call found for tag=20260729_205512.tar, sample_id=M7_1, iteration=4"
+  },
+  {
+    "tag": "20260729_205512.tar",
+    "model_label": "DeepSeek V3.2 step instruction",
+    "sample_id": "M13_1",
+    "iteration": "4",
+    "error": "No Weave call found for tag=20260729_205512.tar, sample_id=M13_1, iteration=4"
+  }
+]

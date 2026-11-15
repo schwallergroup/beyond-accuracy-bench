@@ -27,9 +27,9 @@ MODEL_PROVIDERS = {
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 COMBINED_JUDGE_INPUTS = {
     "gpt-5.4": PROJECT_ROOT
-    / "bench/judge/runs/standard_iter3/results/gpt54/judge_results.csv",
+    / "bench/judge/runs/standard_iteration2_3_4/results/gpt54/judge_results.csv",
     "claude-opus-4.7": PROJECT_ROOT
-    / "bench/judge/runs/standard_iter3/results/claude47/judge_results.csv",
+    / "bench/judge/runs/standard_iteration2_3_4/results/claude47/judge_results.csv",
 }
 
 

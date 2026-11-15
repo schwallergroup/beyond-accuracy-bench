@@ -1,4 +1,5 @@
-from plotting_scripts.styling import PAPER_COLORS
+from matplotlib import colormaps
+from matplotlib.colors import to_hex
 
 
 LABELS = [
@@ -30,22 +31,29 @@ DISPLAY_LABELS = {
     "EIG Reference": "EIG Reference",
 }
 
-MODEL_COLOR_SEQUENCE = [
-    PAPER_COLORS[0],
-    PAPER_COLORS[1],
-    PAPER_COLORS[2],
-    PAPER_COLORS[3],
-    PAPER_COLORS[4],
-    "#2F8F83",
-    "#1F5B9A",
-    "#4C78A8",
-    "#8E6C8A",
-    "#A86D1B",
+# Sample plasma at equal intervals across all 13 methods. Interleave the
+# comparison methods with the other models to spread its four colors apart.
+COLOR_LABEL_ORDER = [
+    LABELS[0],
+    LABELS[1],
+    LABELS[2],
+    "Maximin LHS",
+    LABELS[3],
+    LABELS[4],
+    "Bayes",
+    LABELS[5],
+    LABELS[6],
+    "EIG Reference",
+    LABELS[7],
+    LABELS[8],
+    LABELS[9],
 ]
-
 MODEL_COLORS = {
-    **dict(zip(LABELS, MODEL_COLOR_SEQUENCE)),
-    "Maximin LHS": "#B5B5B5",
-    "Bayes": "#D1D1D1",
-    "EIG Reference": "#6F7F8F",
+    label: to_hex(colormaps["plasma"](0.08 + 0.84 * index / (len(COLOR_LABEL_ORDER) - 1)))
+    for index, label in enumerate(COLOR_LABEL_ORDER)
+}
+MODEL_COLOR_SEQUENCE = [MODEL_COLORS[label] for label in LABELS]
+COMPARISON_COLORS = {
+    label: MODEL_COLORS[label]
+    for label in (LABELS[0], "Maximin LHS", "Bayes", "EIG Reference")
 }

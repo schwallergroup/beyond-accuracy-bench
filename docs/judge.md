@@ -22,7 +22,7 @@ recording the source-manifest hash and all selection arguments:
 
 ```bash
 poetry run python -m bench.judge.derive_manifest \
-  --source-manifest bench/judge/runs/standard_iter3/manifest.csv \
+  --source-manifest bench/judge/manifests/neurips_10models_Mstar0_1_iter3.csv \
   --sample-indices 0 1 \
   --iterations 2 3 4 \
   --output bench/judge/manifests/neurips_10models_Mstar0_1_iter2_3_4_llm.csv
@@ -35,11 +35,11 @@ iteration 4:
 
 ```bash
 poetry run python -m bench.judge.derive_manifest \
-  --source-manifest bench/judge/runs/standard_iter3/manifest.csv \
+  --source-manifest bench/judge/manifests/neurips_10models_Mstar0_1_iter3.csv \
   --sample-ids-by-iteration \
     3:M2_1,M7_0,M12_0 \
     4:M3_0,M9_0,M15_0 \
-  --output bench/judge/manifests/neurips_10models_Mstar0_1_iter3_4_human.csv
+  --output bench/judge/manifests/expert_judge.csv
 ```
 
 Download the traces selected by the manifest from Weave. This is the only judge-pipeline command that requires `WANDB_API_KEY`:

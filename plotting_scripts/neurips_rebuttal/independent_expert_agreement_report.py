@@ -18,7 +18,7 @@ from plotting_scripts.neurips_rebuttal.iteration_reasoning_score_analysis import
 KEYS=['sample_id','iteration','model_name','rubric_key']
 
 PROJECT_ROOT = ROOT
-HUMAN_INPUT = ROOT / "bench/judge/human_runs/human_judge_results_f6e6ad1c5a1f.csv"
+HUMAN_INPUT = ROOT / "bench/judge/human_runs/expert_judge_1/human_judge_results.csv"
 
 
 def load_human_and_debiased_llm_scores() -> pd.DataFrame:
@@ -60,7 +60,7 @@ def load_human_and_debiased_llm_scores() -> pd.DataFrame:
 
 def build_tables():
     paired=load_human_and_debiased_llm_scores()
-    second=pd.read_csv(ROOT/'bench/judge/human_runs/human_judge_results_2.csv')
+    second=pd.read_csv(ROOT/'bench/judge/human_runs/expert_judge_2/human_judge_results.csv')
     second['model_name']=second.model_label.str.replace(' with Mechanism Info','',regex=False)
     paired=paired.merge(second[KEYS+['score']].rename(columns={'score':'expert_2'}),on=KEYS,validate='one_to_one')
     if len(paired)!=120 or paired[KEYS].duplicated().any():
@@ -96,7 +96,7 @@ def load_audited_scores(paired):
 
 def build_saved_audit_tables():
     paired = load_human_and_debiased_llm_scores()
-    second = pd.read_csv(ROOT / 'bench/judge/human_runs/human_judge_results_2.csv')
+    second = pd.read_csv(ROOT / 'bench/judge/human_runs/expert_judge_2/human_judge_results.csv')
     second['model_name'] = second.model_label.map(_strip_mechanism_suffix)
     paired = paired.merge(second[KEYS + ['score']].rename(columns={'score': 'expert_2'}), on=KEYS, validate='one_to_one')
     audited = load_audited_scores(paired)

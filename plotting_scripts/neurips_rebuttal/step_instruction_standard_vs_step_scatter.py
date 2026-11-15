@@ -26,7 +26,6 @@ from plotting_scripts.neurips_rebuttal.mechanism_info_accuracy_comparison import
     gather_step5_accuracy,
 )
 from plotting_scripts.neurips_rebuttal.step_instruction_reasoning_accuracy_correlation import (  # noqa: E402
-    JUDGE_INPUTS as STEP_JUDGE_INPUTS,
     STEP_RUNS,
 )
 from plotting_scripts.styling import apply_paper_rcparams  # noqa: E402
@@ -34,19 +33,23 @@ from plotting_scripts.styling import apply_paper_rcparams  # noqa: E402
 
 STANDARD_JUDGE_INPUTS = {
     "gpt-5.4": (
-        PROJECT_ROOT / "bench/judge/runs/standard_iter3/results/gpt54/judge_results.csv",
+        PROJECT_ROOT / "bench/judge/runs/standard_iteration2_3_4/results/gpt54/judge_results.csv",
     ),
     "claude-opus-4.7": (
-        PROJECT_ROOT / "bench/judge/runs/standard_iter3/results/claude47/judge_results.csv",
+        PROJECT_ROOT / "bench/judge/runs/standard_iteration2_3_4/results/claude47/judge_results.csv",
     ),
+}
+STEP_JUDGE_INPUTS = {
+    judge: (PROJECT_ROOT / f"bench/judge/runs/four_step_ablation_iteration2_3_4/results/{directory}/judge_results.csv",)
+    for judge, directory in (("gpt-5.4", "gpt54"), ("claude-opus-4.7", "claude47"))
 }
 OUTPUT_DIR = SCRIPT_DIR / "step_instruction_judge_analysis"
 OUTPUT_PNG = OUTPUT_DIR / "standard_vs_step_instruction_accuracy_ded_pr_scatter.png"
 OUTPUT_CSV = OUTPUT_DIR / "standard_vs_step_instruction_accuracy_ded_pr_scatter_data.csv"
 METRICS = (
     ("accuracy", "Task Accuracy at Iteration 5", (0.34, 0.66)),
-    ("feature_to_action_faithfulness", "Discriminative Experiment Design", (1.0, 2.03)),
-    ("predictive_sharpness", "Predictive Reasoning", (0.0, 2.03)),
+    ("feature_to_action_faithfulness", "Discriminative Experiment Design", (1.0, 2.08)),
+    ("predictive_sharpness", "Predictive Reasoning", (0.0, 2.08)),
 )
 PLOT_METRICS = METRICS[1:]
 
@@ -64,7 +67,24 @@ def _trace_scores(judge_inputs: dict[str, tuple[Path, ...]], prompt_suffix: str)
     eligible = scores[
         scores.apply(lambda row: row["judge_id"] != canonical_model_id(row["model"]), axis=1)
     ]
-    return eligible.groupby(["model", "sample_id", "rubric_key"], as_index=False)["score"].mean()
+    eligible = eligible[eligible["iteration"].isin([2, 3, 4])]
+    return eligible.groupby(["model", "sample_id", "iteration", "rubric_key"], as_index=False)["score"].mean()
+
+
+def paired_trace_scores() -> pd.DataFrame:
+    standard = _trace_scores(STANDARD_JUDGE_INPUTS, r"\s+with\s+mechanism\s+info$")
+    step = _trace_scores(STEP_JUDGE_INPUTS, r"\s+step\s+instruction$")
+    return standard.merge(step, on=["model", "sample_id", "iteration", "rubric_key"],
+                          suffixes=("_standard", "_step"), validate="one_to_one")
+
+
+def cluster_ci(group: pd.DataFrame, column: str) -> tuple[float, float]:
+    """Resample systems, retaining their repeated iteration observations."""
+    clusters = group.groupby("sample_id")[column].agg(["sum", "count"])
+    rng = np.random.default_rng(0)
+    indices = rng.integers(0, len(clusters), size=(4000, len(clusters)))
+    means = clusters["sum"].to_numpy()[indices].sum(axis=1) / clusters["count"].to_numpy()[indices].sum(axis=1)
+    return tuple(np.percentile(means, [2.5, 97.5]))
 
 
 def _summary_score(trace_scores: pd.DataFrame, model: str, rubric_key: str) -> tuple[float, float, float, int]:
@@ -76,8 +96,7 @@ def _summary_score(trace_scores: pd.DataFrame, model: str, rubric_key: str) -> t
 
 
 def build_plot_data() -> pd.DataFrame:
-    standard_scores = _trace_scores(STANDARD_JUDGE_INPUTS, r"\s+with\s+mechanism\s+info$")
-    step_scores = _trace_scores(STEP_JUDGE_INPUTS, r"\s+step\s+instruction$")
+    paired = paired_trace_scores()
     experiments = discover_experiments(str(PROJECT_ROOT / "results"))
     standard_labels = [f"{model} with Mechanism Info" for model, _ in STEP_RUNS]
     selected_standard = {
@@ -95,16 +114,15 @@ def build_plot_data() -> pd.DataFrame:
                 if metric_key == "accuracy":
                     standard_values, step_values = standard_accuracy, step_accuracy
                 else:
-                    standard_values = standard_scores.loc[
-                        (standard_scores["model"] == model)
-                        & (standard_scores["rubric_key"] == metric_key), "score"
-                    ].to_numpy(dtype=float)
-                    step_values = step_scores.loc[
-                        (step_scores["model"] == model)
-                        & (step_scores["rubric_key"] == metric_key), "score"
-                    ].to_numpy(dtype=float)
-                standard_low, standard_high = _bootstrap_ci(standard_values)
-                step_low, step_high = _bootstrap_ci(step_values)
+                    group = paired[(paired["model"] == model) & (paired["rubric_key"] == metric_key)]
+                    standard_values = group["score_standard"].to_numpy(dtype=float)
+                    step_values = group["score_step"].to_numpy(dtype=float)
+                if metric_key == "accuracy":
+                    standard_low, standard_high = _bootstrap_ci(standard_values)
+                    step_low, step_high = _bootstrap_ci(step_values)
+                else:
+                    standard_low, standard_high = cluster_ci(group, "score_standard")
+                    step_low, step_high = cluster_ci(group, "score_step")
                 rows.append(
                     {
                         "model": model,
@@ -141,7 +159,7 @@ def plot(plot_df: pd.DataFrame) -> None:
         ax.plot(limits, limits, color="0.35", linestyle="--", linewidth=0.8, zorder=0)
         ax.set_xlim(*limits)
         ax.set_ylim(*limits)
-        ax.set_xlabel(f"Standard Prompt\n{label}", fontsize=11)
+        ax.set_xlabel(f"Standard Prompt\n{label} (Iterations 2–4)", fontsize=10)
         ax.grid(True, linestyle="--", linewidth=0.5, alpha=0.7)
         ax.set_axisbelow(True)
         ax.tick_params(axis="both", labelsize=10)

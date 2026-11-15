@@ -25,20 +25,21 @@ from plotting_scripts.neurips.judge_score_accuracy_scatter import (  # noqa: E40
 )
 from plotting_scripts.neurips.paper_model_metadata import MODEL_COLORS, DISPLAY_LABELS  # noqa: E402
 from plotting_scripts.neurips.archived_experiment_data import discover_experiments  # noqa: E402
-from plotting_scripts.neurips_rebuttal.judge_filtering import canonical_model_id  # noqa: E402
 from plotting_scripts.neurips_rebuttal.mechanism_info_accuracy_comparison import (  # noqa: E402
     gather_step5_accuracy,
 )
 from plotting_scripts.neurips_rebuttal.step_instruction_reasoning_accuracy_correlation import (  # noqa: E402
-    JUDGE_INPUTS,
     STEP_RUNS,
+)
+from plotting_scripts.neurips_rebuttal.step_instruction_standard_vs_step_scatter import (  # noqa: E402
+    STEP_JUDGE_INPUTS, _trace_scores, cluster_ci,
 )
 from plotting_scripts.styling import apply_paper_rcparams  # noqa: E402
 
 
 OUTPUT_DIR = SCRIPT_DIR / "step_instruction_judge_analysis"
-OUTPUT_PNG = OUTPUT_DIR / "iteration3_pr_ded_vs_iteration5_accuracy_scatter.png"
-OUTPUT_CSV = OUTPUT_DIR / "iteration3_pr_ded_vs_iteration5_accuracy_scatter_data.csv"
+OUTPUT_PNG = OUTPUT_DIR / "iterations2_4_pr_ded_vs_iteration5_accuracy_scatter.png"
+OUTPUT_CSV = OUTPUT_DIR / "iterations2_4_pr_ded_vs_iteration5_accuracy_scatter_data.csv"
 RUBRIC_ORDER = (DESIGN_KEY, PREDICTIVE_KEY)
 MODEL_ORDER = tuple(model for model, _ in STEP_RUNS)
 BOOTSTRAP_SAMPLES = 4000
@@ -46,22 +47,7 @@ BOOTSTRAP_SEED = 0
 
 
 def _reasoning_trace_scores() -> pd.DataFrame:
-    frames = []
-    for judge_id, paths in JUDGE_INPUTS.items():
-        for path in paths:
-            frame = pd.read_csv(path)
-            frame["model"] = frame["model_label"].str.replace(
-                r"\s+step\s+instruction$", "", regex=True, case=False
-            )
-            frame["judge_id"] = judge_id
-            frames.append(frame)
-    scores = pd.concat(frames, ignore_index=True)
-    scores["score"] = pd.to_numeric(scores["score"], errors="raise")
-    return scores[
-        scores.apply(
-            lambda row: row["judge_id"] != canonical_model_id(row["model"]), axis=1
-        )
-    ].groupby(["model", "sample_id", "rubric_key"], as_index=False)["score"].mean()
+    return _trace_scores(STEP_JUDGE_INPUTS, r"\s+step\s+instruction$")
 
 
 def build_plot_dataframe() -> pd.DataFrame:
@@ -73,17 +59,18 @@ def build_plot_dataframe() -> pd.DataFrame:
         for index, (model, source) in enumerate(STEP_RUNS):
             accuracy = gather_step5_accuracy(by_source[source])["accuracy"].to_numpy(dtype=float)
             for rubric_key in RUBRIC_ORDER:
-                trace_scores = scores.loc[
-                    (scores["model"] == model) & (scores["rubric_key"] == rubric_key), "score"
-                ].to_numpy(dtype=float)
+                group = scores.loc[(scores["model"] == model) & (scores["rubric_key"] == rubric_key)]
+                trace_scores = group["score"].to_numpy(dtype=float)
+                score_low, score_high = cluster_ci(group, "score")
                 rows.append(
                     {
                         "model": model,
                         "rubric_key": rubric_key,
                         "mean_score": trace_scores.mean(),
-                        "score_ci_low": _bootstrap_ci(trace_scores)[0],
-                        "score_ci_high": _bootstrap_ci(trace_scores)[1],
+                        "score_ci_low": score_low,
+                        "score_ci_high": score_high,
                         "n_traces": len(trace_scores),
+                        "n_systems": group["sample_id"].nunique(),
                         "accuracy": accuracy.mean(),
                         "accuracy_ci_low": _bootstrap_ci(accuracy)[0],
                         "accuracy_ci_high": _bootstrap_ci(accuracy)[1],
@@ -121,7 +108,7 @@ def plot_scatter(plot_df: pd.DataFrame) -> None:
         panel = plot_df[plot_df["rubric_key"] == rubric_key]
         x = panel["mean_score"].to_numpy(dtype=float)
         y = panel["accuracy"].to_numpy(dtype=float)
-        lower, upper = (1.0, 2.03) if rubric_key == DESIGN_KEY else (0.5, 2.03)
+        lower, upper = (1.0, 2.08) if rubric_key == DESIGN_KEY else (0.5, 2.08)
         x_grid = np.linspace(lower, upper, 200)
         fit, band_low, band_high = _bootstrap_regression_band(x, y, x_grid)
         ax.fill_between(x_grid, band_low, band_high, color="0.3", alpha=0.18, linewidth=0, zorder=0)
@@ -131,7 +118,7 @@ def plot_scatter(plot_df: pd.DataFrame) -> None:
         ax.errorbar(x, y, xerr=xerr, yerr=yerr, fmt="none", ecolor="0.25", elinewidth=0.7,
                     capsize=1.8, capthick=0.7, zorder=1)
         ax.scatter(x, y, c=panel["color"].tolist(), s=52, edgecolors="black", linewidths=0.55, zorder=3)
-        ax.set_xlabel(RUBRIC_LABELS[rubric_key].replace("\n", " "), fontsize=AXIS_LABEL_FONTSIZE)
+        ax.set_xlabel(RUBRIC_LABELS[rubric_key].replace("\n", " ") + "\n(Iterations 2–4)", fontsize=AXIS_LABEL_FONTSIZE)
         ax.set_xlim(lower, upper)
         ax.set_xticks(np.arange(1.0, 2.01, 0.25) if rubric_key == DESIGN_KEY else np.arange(0.5, 2.01, 0.5))
         ax.tick_params(axis="both", labelsize=TICK_LABEL_FONTSIZE)

@@ -1,0 +1,28 @@
+model,metric,paired_change,change_ci_low,change_ci_high,n_paired,n_systems,n_standard,n_step,standard_mean,step_mean
+Claude Haiku 4.5,feature_to_action_faithfulness,-0.016667,-0.120833,0.083333,120,40.000000,,,,
+Claude Haiku 4.5,predictive_sharpness,0.275000,0.191667,0.362500,120,40.000000,,,,
+Claude Opus 4.7,feature_to_action_faithfulness,-0.066667,-0.158333,0.025000,120,40.000000,,,,
+Claude Opus 4.7,predictive_sharpness,0.508333,0.416667,0.600000,120,40.000000,,,,
+DeepSeek V3.2,feature_to_action_faithfulness,0.330508,0.231092,0.432773,118,40.000000,,,,
+DeepSeek V3.2,predictive_sharpness,0.737288,0.656780,0.809322,118,40.000000,,,,
+GPT-4o,feature_to_action_faithfulness,0.033333,-0.058333,0.129167,120,40.000000,,,,
+GPT-4o,predictive_sharpness,0.250000,0.179167,0.320833,120,40.000000,,,,
+GPT-5.4,feature_to_action_faithfulness,0.175000,0.066667,0.283333,120,40.000000,,,,
+GPT-5.4,predictive_sharpness,0.083333,0.025000,0.150000,120,40.000000,,,,
+Gemini 2.5 Pro,feature_to_action_faithfulness,0.033333,-0.041667,0.108333,120,40.000000,,,,
+Gemini 2.5 Pro,predictive_sharpness,0.129167,0.079167,0.187500,120,40.000000,,,,
+Gemini 3.1 Pro,feature_to_action_faithfulness,0.058333,0.025000,0.095833,120,40.000000,,,,
+Gemini 3.1 Pro,predictive_sharpness,0.108333,0.066667,0.158333,120,40.000000,,,,
+Llama 4 Maverick,feature_to_action_faithfulness,0.029167,-0.050000,0.112500,120,40.000000,,,,
+Llama 4 Maverick,predictive_sharpness,0.370833,0.287500,0.454167,120,40.000000,,,,
+Qwen3-32B,feature_to_action_faithfulness,0.191667,0.100000,0.275000,120,40.000000,,,,
+Qwen3-32B,predictive_sharpness,0.887500,0.825000,0.945833,120,40.000000,,,,
+Claude Haiku 4.5,Accuracy,-0.040000,-0.120000,0.040000,200,,200.000000,200.000000,0.435000,0.395000
+Claude Opus 4.7,Accuracy,-0.055000,-0.135000,0.030000,200,,200.000000,200.000000,0.520000,0.465000
+Gemini 2.5 Pro,Accuracy,-0.030000,-0.115000,0.055000,200,,200.000000,200.000000,0.575000,0.545000
+Gemini 3.1 Pro,Accuracy,-0.040000,-0.120000,0.035125,200,,200.000000,200.000000,0.610000,0.570000
+GPT-5.4,Accuracy,-0.005000,-0.095000,0.080000,200,,200.000000,200.000000,0.470000,0.465000
+GPT-4o,Accuracy,-0.040000,-0.115000,0.035125,200,,200.000000,200.000000,0.420000,0.380000
+Qwen3-32B,Accuracy,0.015000,-0.065000,0.095000,200,,200.000000,200.000000,0.395000,0.410000
+DeepSeek V3.2,Accuracy,0.045226,-0.040327,0.135678,199,,200.000000,199.000000,0.470000,0.512563
+Llama 4 Maverick,Accuracy,-0.040609,-0.131980,0.045685,197,,200.000000,197.000000,0.425000,0.375635

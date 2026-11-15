@@ -40,9 +40,8 @@ For the pooled score error bars, resample the 40 independent reaction systems,
 retaining their three iterations together. The figure script implements this
 by bootstrapping the system-level three-iteration means. Model-level Spearman
 intervals use paired resampling of the ten model aggregates. The iteration-3
-values in the robustness table use this newer judging pass; historical
-iteration-3 exclusion results and the standard-prompt side of Fig. 5 use the
-earlier judging pass and have different coefficients.
+values in the robustness table and the standard-prompt side of Fig. 6 use
+this iteration-2–4 judging pass.
 
 The older `plotting_scripts/neurips/judge_rubric_scores_by_model.py` and `judge_score_accuracy_scatter.py` contain shared helpers and historical iteration-3 plotting entry points. Use the camera-ready command above for the final Fig. 4.
 
@@ -52,8 +51,8 @@ The older `plotting_scripts/neurips/judge_rubric_scores_by_model.py` and `judge_
 | --- | --- |
 | H.5, Table 7: iteration-specific reasoning–accuracy correlations | `poetry run python plotting_scripts/neurips_rebuttal/iteration_reasoning_score_report.py`; read `iteration_analysis/iteration_score_accuracy_spearman.csv` |
 | I.1, Fig. 6: standard vs four-step instructions | `poetry run python plotting_scripts/neurips_rebuttal/step_instruction_standard_vs_step_scatter.py`; output `step_instruction_judge_analysis/standard_vs_step_instruction_accuracy_ded_pr_scatter.png` |
-| I.1, Fig. 7: four-step reasoning vs accuracy | `poetry run python plotting_scripts/neurips_rebuttal/step_instruction_judge_score_accuracy_scatter.py`; output `step_instruction_judge_analysis/iteration3_pr_ded_vs_iteration5_accuracy_scatter.png` |
-| I.1: four-step correlation estimates and confidence intervals | `poetry run python plotting_scripts/neurips_rebuttal/step_instruction_reasoning_accuracy_correlation.py`; output `step_instruction_judge_analysis/iteration3_pr_ded_vs_iteration5_accuracy_spearman.csv` |
+| I.1, Fig. 7: four-step reasoning vs accuracy | `poetry run python plotting_scripts/neurips_rebuttal/step_instruction_judge_score_accuracy_scatter.py`; output `step_instruction_judge_analysis/iterations2_4_pr_ded_vs_iteration5_accuracy_scatter.png` |
+| I.1: four-step correlation estimates and confidence intervals | `poetry run python plotting_scripts/neurips_rebuttal/step_instruction_reasoning_accuracy_correlation.py`; output `step_instruction_judge_analysis/iterations2_4_pr_ded_vs_iteration5_accuracy_spearman.csv` |
 | H.4, Table 4: expert–expert and both expert–LLM agreements | `poetry run python plotting_scripts/neurips_rebuttal/independent_expert_agreement_report.py`; output `judge_agreement_analysis/independent_annotator_and_llm_agreement_spearman.csv` |
 | Appendix table: extreme-score expert audit | The same expert-agreement command; outputs `judge_agreement_analysis/blinded_expert_audit_llm_high_low.csv` and `blinded_expert_audit_llm_consensus_extremes.csv` |
 | Appendix table: mechanism information withheld, accuracy | `poetry run python plotting_scripts/neurips_rebuttal/mechanism_info_accuracy_comparison.py`; output `mechanism_info_ablation/iteration5_accuracy_with_vs_without_mechanism.csv` |
@@ -109,27 +108,28 @@ All paths in this table are under `bench/judge/`.
 | `runs/standard_iteration2_3_4/traces/` | Main 1,200 traces; parent directory contains manifest and provenance/settings |
 | `runs/standard_iteration2_3_4/results/gpt54/` | Main GPT-5.4 scores |
 | `runs/standard_iteration2_3_4/results/claude47/` | Main Claude Opus 4.7 scores |
-| `runs/standard_iter3/` | Historical standard-prompt 400 traces and both judges; `results/gpt54/` and `results/claude47/`, used by Fig. 5 |
-| `runs/four_step_iter3/` | All nine four-step models: 360 traces and both judges; `results/gpt54/` and `results/claude47/`, used by Figs. 5–7 |
+| `runs/four_step_ablation_iteration2_3_4/` | Nine four-step models, 1,078 traces across iterations 2–4, judged by both models; used by Figs. 6–7 |
 | `runs/neurips_10models_Mstar0_1_iter3_4_human/` | The 60 traces assigned to independent experts |
-| `human_runs/neurips_10models_pilot_M12_0_M7_0_M2_1_iter3/` | Author pilot: 30 traces, four axes |
-| `human_runs/human_judge_results_f6e6ad1c5a1f.csv` | First expert: 60 traces, DED and PR |
-| `human_runs/human_judge_results_2.csv` | Second expert: the same 60 traces and two axes |
+| `human_runs/author_judge/` | Author pilot: 30 traces, four axes |
+| `human_runs/expert_judge_1/human_judge_results.csv` | First expert: 60 traces, DED and PR |
+| `human_runs/expert_judge_2/human_judge_results.csv` | Second expert: the same 60 traces and two axes |
 
-Fig. 5 uses an earlier standard-prompt judging pass. Its scores differ from the iteration-3 slice of the main iteration-2–4 pass; substituting the latter changes the result.
+The canonical human-annotation selections are `manifests/author_judge.csv` and
+`manifests/expert_judge.csv`. The expert run also retains an identical
+`manifest.csv` beside its traces because the annotation app requires it there.
+
+Fig. 6 uses the main iteration-2–4 standard-prompt judging pass.
 
 The main-analysis `traces/` folder contains the agents' reasoning traces.
 The `results/gpt54/` and `results/claude47/` folders contain independent scores for the same
 1,200 traces: four rubric ratings per trace, or 4,800 ratings per judge.
 
-Four-step data are consolidated in `runs/four_step_iter3/`: nine models ×
-40 systems × iteration 3 = 360 traces, with 1,440 ratings per judge. The
-original collection used three batches of three models; their original run
-configurations are preserved in `source_run_configs.json`. Consolidation
-does not change scores or the original batch order.
+Four-step data are consolidated in `runs/four_step_ablation_iteration2_3_4/`:
+1,078 traces and 4,312 ratings per judge. Two DeepSeek iteration-4 traces are
+unavailable; see `unavailable_traces.json`. Original iteration-3 collection
+configurations are preserved in `source_run_configs.json`.
 `STEP_RUNS` in `step_instruction_reasoning_accuracy_correlation.py` specifies
-the corresponding experiment archives. The consolidated historical standard
-run likewise preserves its original configurations in `source_run_configs.json`.
+the corresponding experiment archives.
 
 For expert annotation, follow [the annotation instructions](human_annotation.md).
 The app reads `runs/neurips_10models_Mstar0_1_iter3_4_human/traces` and its

@@ -10,6 +10,7 @@ project_root = os.path.abspath(os.path.join(script_dir, "..", ".."))
 sys.path.insert(0, project_root)
 
 from plotting_scripts.styling import apply_paper_rcparams
+from plotting_scripts.neurips.paper_model_metadata import MODEL_COLORS
 from plotting_scripts.neurips.archived_experiment_data import (
     PREFERRED_SOURCES_BY_LABEL,
     build_metric_dataframe,
@@ -20,10 +21,11 @@ from plotting_scripts.neurips.archived_experiment_data import (
 
 BOOTSTRAP_SAMPLES = 4000
 BOOTSTRAP_SEED = 0
-MARKERS_BY_LABEL = {
-    "Maximin LHS": "s",
-    "Bayes": "^",
-    "EIG Reference": "D",
+LINESTYLES_BY_LABEL = {
+    "Gemini 3.1 Pro with Mechanism Info": "-",
+    "Maximin LHS": (0, (6, 3)),
+    "Bayes": (0, (3, 1.5, 1, 1.5)),
+    "EIG Reference": ":",
 }
 
 
@@ -71,13 +73,16 @@ def _plot_metric_panel(ax, df: pd.DataFrame, metric_name: str, experiments, ylab
         means = summary["mean"].to_numpy(dtype=float)
         lower = means - summary["ci_low"].to_numpy(dtype=float)
         upper = summary["ci_high"].to_numpy(dtype=float) - means
+        is_gemini = exp.label == "Gemini 3.1 Pro with Mechanism Info"
         ax.plot(
             xs,
             means,
             color=exp.color,
-            linestyle=exp.linestyle,
-            marker=MARKERS_BY_LABEL.get(exp.label, "o"),
-            markersize=5,
+            linestyle=LINESTYLES_BY_LABEL[exp.label],
+            linewidth=1.8 if is_gemini else 1.3,
+            marker="o",
+            markersize=4,
+            zorder=3 if is_gemini else 2,
             label=exp.label,
         )
         ax.errorbar(
@@ -85,15 +90,16 @@ def _plot_metric_panel(ax, df: pd.DataFrame, metric_name: str, experiments, ylab
             means,
             yerr=np.vstack([lower, upper]),
             fmt="none",
-            ecolor="black" if metric_name == "Occupancy Entropy" else exp.color,
-            elinewidth=1.0 if metric_name == "Occupancy Entropy" else 0.8,
-            capsize=3.0 if metric_name == "Occupancy Entropy" else 2.0,
-            capthick=1.0 if metric_name == "Occupancy Entropy" else 0.8,
-            zorder=4,
+            ecolor=exp.color,
+            elinewidth=0.65,
+            capsize=0,
+            alpha=0.65,
+            zorder=1.5,
         )
     ax.set_xlabel("Iteration")
     ax.set_ylabel(ylabel)
-    ax.grid(True, axis="y", linestyle="--", linewidth=0.5)
+    ax.grid(True, axis="y", linestyle="--", linewidth=0.4, alpha=0.3)
+    ax.set_axisbelow(True)
     ax.xaxis.set_major_locator(plt.MaxNLocator(integer=True))
     if metric_name in {"Proposal Entropy", "Adaptivity"}:
         ax.set_xticks(range(2, 6))
@@ -202,10 +208,14 @@ def main():
     gemini_vs_lhs_selected = select_preferred_experiments(experiments, gemini_vs_lhs_labels)
     gemini_vs_lhs_by_label = {exp.label: exp for exp in gemini_vs_lhs_selected}
     gemini_vs_lhs_exps = [gemini_vs_lhs_by_label[label] for label in gemini_vs_lhs_labels if label in gemini_vs_lhs_by_label]
+    # Share the source palette used by camera_ready_reasoning_score_figures._model_color_map;
+    # baseline colors are defined in the same mapping alongside the model colors.
+    for exp in gemini_vs_lhs_exps:
+        exp.color = MODEL_COLORS[exp.label]
     gemini_vs_lhs_short = {
         "Gemini 3.1 Pro with Mechanism Info": "Gemini 3.1 Pro",
-        "Maximin LHS": "Maximin LHS",
-        "Bayes": "Bayes",
+        "Maximin LHS": "Maximin LHS (baseline)",
+        "Bayes": "Bayesian Optimization (baseline)",
         "EIG Reference": "EIG Reference",
     }
 
@@ -227,8 +237,9 @@ def main():
     handles, labels = axs1[0].get_legend_handles_labels()
     if handles:
         display_labels = [gemini_vs_lhs_short.get(label, label) for label in labels]
-        axs1[0].legend(handles, display_labels, loc="upper left", frameon=False, fontsize=7)
-    fig1.tight_layout()
+        fig1.legend(handles, display_labels, loc="upper center", bbox_to_anchor=(0.5, 1.02),
+                    ncol=2, frameon=False, fontsize=6, handlelength=3)
+    fig1.tight_layout(rect=(0, 0, 1, 0.91))
     fig1.savefig(os.path.join(output_dir, "baseline_accuracy_entropy_comparison.png"), dpi=300, bbox_inches="tight")
     plt.close(fig1)
 

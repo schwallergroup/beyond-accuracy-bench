@@ -1,6 +1,6 @@
 """Relate four-step reasoning scores to iteration-5 task accuracy.
 
-Uses the nine step-instruction ablations judged on M*_0/M*_1 at iteration 3.
+Uses the nine step-instruction ablations judged on M*_0/M*_1 at iterations 2–4.
 The target model is never scored by an identical judge model: GPT-5.4 targets
 retain Claude Opus 4.7 scores only, Claude Opus 4.7 targets retain GPT-5.4
 scores only, and all other targets average both judges.
@@ -44,15 +44,15 @@ STEP_RUNS = (
 )
 JUDGE_INPUTS = {
     "gpt-5.4": (
-        PROJECT_ROOT / "bench/judge/runs/four_step_iter3/results/gpt54/judge_results.csv",
+        PROJECT_ROOT / "bench/judge/runs/four_step_ablation_iteration2_3_4/results/gpt54/judge_results.csv",
     ),
     "claude-opus-4.7": (
-        PROJECT_ROOT / "bench/judge/runs/four_step_iter3/results/claude47/judge_results.csv",
+        PROJECT_ROOT / "bench/judge/runs/four_step_ablation_iteration2_3_4/results/claude47/judge_results.csv",
     ),
 }
 OUTPUT_DIR = SCRIPT_DIR / "step_instruction_judge_analysis"
-MODEL_CSV = OUTPUT_DIR / "iteration3_reasoning_vs_iteration5_accuracy.csv"
-CORRELATION_CSV = OUTPUT_DIR / "iteration3_pr_ded_vs_iteration5_accuracy_spearman.csv"
+MODEL_CSV = OUTPUT_DIR / "iterations2_4_reasoning_vs_iteration5_accuracy.csv"
+CORRELATION_CSV = OUTPUT_DIR / "iterations2_4_pr_ded_vs_iteration5_accuracy_spearman.csv"
 
 
 def build_model_table() -> pd.DataFrame:
@@ -75,8 +75,9 @@ def build_model_table() -> pd.DataFrame:
             lambda row: row["judge_id"] != canonical_model_id(row["model"]), axis=1
         )
     ]
+    per_trace = eligible.groupby(["model", "sample_id", "iteration", "rubric_key"], as_index=False).agg(score=("score", "mean"))
     reasoning = (
-        eligible.groupby(["model", "rubric_key"], as_index=False)
+        per_trace.groupby(["model", "rubric_key"], as_index=False)
         .agg(reasoning_score=("score", "mean"), n_trace_scores=("score", "size"))
         .pivot(index="model", columns="rubric_key", values="reasoning_score")
         .reset_index()

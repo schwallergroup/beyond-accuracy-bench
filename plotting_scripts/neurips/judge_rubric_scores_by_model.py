@@ -59,43 +59,43 @@ def _strip_mechanism_suffix(label: str) -> str:
 DEFAULT_INPUTS = {
     "Gemini 3.1 Pro": os.path.join(
         project_root,
-        "bench/judge/runs/standard_iter3/results/gpt54/judge_results.csv",
+        "bench/judge/runs/standard_iteration2_3_4/results/gpt54/judge_results.csv",
     ),
     "Gemini 2.5 Pro": os.path.join(
         project_root,
-        "bench/judge/runs/standard_iter3/results/gpt54/judge_results.csv",
+        "bench/judge/runs/standard_iteration2_3_4/results/gpt54/judge_results.csv",
     ),
     "GPT-5.4": os.path.join(
         project_root,
-        "bench/judge/runs/standard_iter3/results/gpt54/judge_results.csv",
+        "bench/judge/runs/standard_iteration2_3_4/results/gpt54/judge_results.csv",
     ),
     "GPT-4o": os.path.join(
         project_root,
-        "bench/judge/runs/standard_iter3/results/gpt54/judge_results.csv",
+        "bench/judge/runs/standard_iteration2_3_4/results/gpt54/judge_results.csv",
     ),
     "Claude Opus 4.7": os.path.join(
         project_root,
-        "bench/judge/runs/standard_iter3/results/gpt54/judge_results.csv",
+        "bench/judge/runs/standard_iteration2_3_4/results/gpt54/judge_results.csv",
     ),
     "Claude Haiku 4.5": os.path.join(
         project_root,
-        "bench/judge/runs/standard_iter3/results/gpt54/judge_results.csv",
+        "bench/judge/runs/standard_iteration2_3_4/results/gpt54/judge_results.csv",
     ),
     "DeepSeek V3.2": os.path.join(
         project_root,
-        "bench/judge/runs/standard_iter3/results/gpt54/judge_results.csv",
+        "bench/judge/runs/standard_iteration2_3_4/results/gpt54/judge_results.csv",
     ),
     "Mistral Large 3": os.path.join(
         project_root,
-        "bench/judge/runs/standard_iter3/results/gpt54/judge_results.csv",
+        "bench/judge/runs/standard_iteration2_3_4/results/gpt54/judge_results.csv",
     ),
     "Llama 4 Maverick": os.path.join(
         project_root,
-        "bench/judge/runs/standard_iter3/results/gpt54/judge_results.csv",
+        "bench/judge/runs/standard_iteration2_3_4/results/gpt54/judge_results.csv",
     ),
     "Qwen3-32B": os.path.join(
         project_root,
-        "bench/judge/runs/standard_iter3/results/gpt54/judge_results.csv",
+        "bench/judge/runs/standard_iteration2_3_4/results/gpt54/judge_results.csv",
     ),
 }
 
